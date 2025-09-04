@@ -1,0 +1,23 @@
+782. Avoid "suspected robbery"
+
+Small towns are distributed along the street (which can be understood as all on the number axis), with N banks (the location is represented by the coordinates of the number axis, and the amount represents the amount that can be robbed).
+
+The two kidnappers tried to rob a bank each, and in order to get the police to travel more, they agreed to choose two banks not less than apart D.
+
+Excuse me, what is the maximum total amount they can grab if they meet the agreement.
+
+Input format
+Input contains N + 1 lines.
+
+The first line contains two integers N and D, indicating the number of banks and the agreed distance respectively.
+
+Next N lines, each containing two integers A and B, indicating the coordinates and the amount respectively.
+
+Output format
+Output a number indicating the maximum amount that can be obtained.
+
+Data scope
+1 ≤ N ≤ 2 × 10^5
+1 ≤ D, A, B ≤ 10^8
+
+The data guarantee that at least two banks are present at a distance of not less than D.
