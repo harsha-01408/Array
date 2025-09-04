@@ -21,3 +21,179 @@ Data scope
 1 ≤ D, A, B ≤ 10^8
 
 The data guarantee that at least two banks are present at a distance of not less than D.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+1454. Number of Subsets with Prime XOR Sum
+
+You are given n distinct positive integers.
+
+Count how many subsets of these integers have their XOR-sum equal to a prime number.
+
+Since the answer can be very large, output it modulo 10^9 + 7.
+
+Input
+
+The first line contains an integer n.
+
+The second line contains n distinct positive integers.
+
+Output
+
+Output a single integer — the number of subsets whose XOR-sum is prime, modulo 10^9 + 7.
+
+Constraints
+
+1 ≤ n ≤ 5000
+
+1 ≤ each integer ≤ 5000
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+756. Serpentine Matrix
+
+Enter two integers N and M, output an N × M matrix.
+Fill the numbers from 1 to N × M into the matrix in a backward serpentine (spiral) order.
+
+You can refer to the sample example for the specific filling pattern.
+
+Input format
+
+A single line containing two integers N and M.
+
+Output format
+
+Output an N × M matrix that meets the requirement.
+
+The matrix has N rows, and each row contains M integers separated by spaces.
+
+Data constraints
+
+1 ≤ N, M ≤ 100
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxx
+
+Problem 1487: Coin Selection
+
+Problem Statement:
+You are given n1 + n2 types of coins. 
+- The first n1 types are ordinary coins, which you can pick any number of times.
+- The next n2 types are commemorative coins, of which you can pick at most 1 coin of each type. 
+Each coin has a positive integer face value.  
+
+Your task is to find the number of ways to form a total sum of exactly m using these coins. 
+Output the result modulo 10^9 + 7.
+
+Input Format:
+- First line: three integers n1, n2, m 
+  (number of ordinary coins, number of commemorative coins, target sum)
+- Second line: n1 integers a[1..n1], the face values of ordinary coins (strictly increasing)
+- Third line: n2 integers b[1..n2], the face values of commemorative coins (strictly increasing)
+
+Output Format:
+- One integer x: the total number of ways to form sum m modulo 10^9 + 7.
+
+Constraints:
+- For 30% of data: 1 ≤ n1+n2 ≤ 10, 1 ≤ m ≤ 100, 1 ≤ a[i], b[i] ≤ 100
+- For 100% of data: 1 ≤ n1+n2 ≤ 100, 1 ≤ m ≤ 100000, 1 ≤ a[i], b[i] ≤ 100000
+
+Sample Input:
+3 1 5
+1 2 3
+1
+
+Sample Output:
+9
+
+Explanation:
+(x) denotes ordinary coins, [x] denotes commemorative coins. All ways to make sum 5:
+(1)(1)(1)(1)(1)
+(1)(1)(1)(2)
+(1)(1)(3)
+(1)(2)(2)
+(2)(3)
+(1)(1)(1)(1)[1]
+(1)(1)(1)(2)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+730. Robot Jumping Problem
+
+A robot is playing an old DOS-based game.
+
+In the game, there are N+1 buildings indexed from 0 to N, arranged from left to right.
+
+The height of building 0 is 0 units.
+
+The height of building i (where i ≥ 1) is given by H(i) units.
+
+Initially, the robot starts at building 0.
+
+At each step, the robot jumps to the next building (i.e., from building k to building k+1).
+
+Energy Requirement:
+
+Assume the robot is at building k and its current energy is E.
+
+When it jumps to building k+1, if the height of building k+1 (H(k+1)) is greater than E, the robot loses energy equal to the difference H(k+1) - E.
+
+If the height of building k+1 is less than or equal to E, the robot gains energy equal to E - H(k+1).
+
+Goal:
+
+The robot’s goal is to reach building N. The robot’s energy should never go below 0 during the journey.
+
+Problem:
+
+Given the heights of the buildings, find the minimum initial energy E the robot must have in order to reach building N without ever running out of energy.
+
+Input Format:
+
+The first line contains an integer N.
+
+The second line contains N integers, representing the heights of the buildings (from building 1 to building N).
+
+Output Format:
+
+Output the minimum initial energy E (rounded up to the nearest integer) required for the robot to reach building N.
+
+Constraints:
+
+1 ≤ N ≤ 100,000
+
+1 ≤ H(i) ≤ 1,000,000,000
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem Description:
+
+In a small town, there are n banks, and each bank is located along a straight line (on the number axis). Each bank has a position and an amount of money that can be stolen from them.
+
+Two robbers are trying to rob two different banks. However, to make the police chase them more effectively, they agree that the distance between the two banks they rob must be at least d.
+
+Your task is to determine the maximum amount of money they can steal while following the constraint of the minimum distance between the two robbed banks.
+
+Input Format:
+
+The first line contains two integers n and d, representing the number of banks and the minimum distance between the two banks that the robbers can rob.
+
+The next n lines each contain two integers:
+
+a: The position of a bank on the number line.
+
+b: The amount of money available at that bank, respectively.
+
+Output Format:
+
+Output a single integer, which is the maximum total amount of money the two robbers can steal.
+
+Constraints:
+
+1 ≤ n ≤ 200,000
+
+1 ≤ d, a, b ≤ 100,000,000
+
+Note: It is guaranteed that there are at least two banks whose distance is not less than d.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
