@@ -358,3 +358,44 @@ There are 10 completions such that the number is ≡ 7 mod 11 and ≡ 7 mod 13 (
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem: Largest Contiguous Subarray (Lexicographic)
+
+Definition:
+- For two arrays A and B of the same length, A > B if at the first index where they differ,
+  A[i] > B[i]. (This is standard lexicographic order.)
+- A contiguous subarray uses consecutive indices.
+
+Task:
+Given an integer array arr of length n and an integer k (1 ≤ k ≤ n),
+return (or print) the lexicographically largest contiguous subarray of length k
+among all subarrays arr[i..i+k-1] (0 ≤ i ≤ n-k).
+
+Input Format:
+- Line 1: integer n
+- Line 2: n space-separated integers arr[i]
+- Line 3: integer k
+
+Output Format:
+- One line with k space-separated integers: the lexicographically largest contiguous subarray of length k.
+
+Constraints:
+- 1 ≤ k ≤ n ≤ 100
+- 1 ≤ arr[i] ≤ 1000
+
+Example:
+Input
+5
+1 4 3 2 5
+4
+
+Output
+4 3 2 5
+
+Explanation:
+Possible subarrays of size 4: [1,4,3,2] and [4,3,2,5].
+Comparing lexicographically, [4,3,2,5] is larger.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
