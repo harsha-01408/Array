@@ -249,3 +249,66 @@ Data set is large. Use fast I/O.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem: Minimum Distinct People Seen
+
+You are the guard of a shop. Over time, people enter and leave. You record a binary string s:
+
+- s[i] = '1'  → a person enters at time i
+- s[i] = '0'  → a person leaves at time i
+
+A person may enter and leave any number of times.
+Using only this information, determine the minimum possible number of distinct people you might have seen.
+
+Task:
+Given s, compute the smallest number of distinct individuals consistent with the sequence of enters/leaves.
+
+Input:
+- A single binary string s (1 ≤ |s| ≤ 10^5)
+
+Output:
+- A single integer: the minimum possible number of distinct people seen.
+
+Constraints:
+- 1 ≤ len(s) ≤ 10^5
+- s consists only of characters '0' and '1'
+
+Notes:
+- Multiple test strings may be provided one per line (if desired), each to be processed independently.
+
+Examples:
+
+Example 1
+Input:
+000
+Output:
+3
+Explanation:
+t=1: person A leaves
+t=2: person B leaves
+t=3: person C leaves
+Thus 3 distinct people.
+
+Example 2
+Input:
+110011
+Output:
+2
+Explanation:
+t=1: P1 enters
+t=2: P2 enters
+t=3: P1 leaves
+t=4: P2 leaves
+t=5: P1 enters
+t=6: P2 enters
+Minimum distinct people = 2.
+
+Example 3
+Input:
+10101
+Output:
+1
+Explanation:
+One person alternates entering and leaving; only 1 distinct person is needed.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
