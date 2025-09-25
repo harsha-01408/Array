@@ -197,3 +197,55 @@ Note: It is guaranteed that there are at least two banks whose distance is not l
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+NAJ0001 - Divisible Number Sum
+
+Hazzat is a new guy in computer science, now in his 3rd semester. He recently completed a data structures course but keeps encountering problems he can't solve with the structures he knows. He wants to establish a new data structure but keeps failing. Help Hazzat by solving the following problem.
+
+You are given an array A of N integers. You need to answer M queries.
+
+Each query is of the form: V x y
+
+For each query, consider the subarray A[x..y] (1-based indices). Let S be the subset of elements in this range that are fully divisible by V; i.e., include A[i] in S if x ≤ i ≤ y and A[i] % V == 0. Output the sum of all elements in S.
+
+Input
+- The first line contains an integer T (1 ≤ T ≤ 5) — the number of test cases.
+For each test case:
+- A line with two integers N and M (1 ≤ N ≤ 10^5, 1 ≤ M ≤ 2×10^5).
+- A line with N integers: A[1], A[2], ..., A[N] (1 ≤ A[i] ≤ 10^6).
+- Then M lines follow, each with three integers V, x, y (1 ≤ V ≤ 1000, 1 ≤ x ≤ y ≤ N).
+
+Output
+For each test case, print:
+- A line: Case #k
+- Then print M lines, each containing the answer for the corresponding query.
+- Print a blank line between two consecutive test cases.
+
+Sample Input
+2
+5 2
+1 2 3 4 6
+2 1 5
+5 1 4
+5 2
+2 3 5 3 7
+3 2 4
+5 1 5
+
+Sample Output
+Case #1
+12
+0
+
+Case #2
+6
+5
+
+Explanation
+- Query 1 of Case #1: In A[1..5], the divisible-by-2 elements are {2, 4, 6}; their sum is 12.
+- Query 2 of Case #1: In A[1..4], there are no elements divisible by 5; the sum is 0.
+
+Note
+Data set is large. Use fast I/O.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
