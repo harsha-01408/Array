@@ -312,3 +312,49 @@ Explanation:
 One person alternates entering and leaving; only 1 distinct person is needed.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem: Count Good Strings
+
+You are given a string s of length n (1 ≤ n ≤ 10^4).  
+Each character of s is either a digit '0'–'9' or a question mark '?'.
+
+You may replace every '?' with any digit from 0 to 9.  
+A string is called GOOD if, when interpreted as a (possibly leading-zero) decimal number, it leaves remainder 7 when divided by 11 AND also leaves remainder 7 when divided by 13.
+
+Task:
+Count how many different strings can be obtained by replacing '?' such that the resulting number is GOOD.
+
+Notes:
+- Leading zeros are allowed (unless otherwise specified).
+- Equivalently, a GOOD string represents a number congruent to 7 modulo 11 and 13 (i.e., modulo 143).
+
+Input:
+A single line containing the string s.
+
+Output:
+A single integer — the number of GOOD strings.
+
+Constraints:
+1 ≤ n ≤ 10^4  
+s[i] ∈ {'0','1',…,'9','?'}
+
+Examples:
+
+Example 1
+Input:
+??756
+Output:
+1
+Explanation:
+Only one completion works: 34756.
+
+Example 2
+Input:
+??33?
+Output:
+10
+Explanation:
+There are 10 completions such that the number is ≡ 7 mod 11 and ≡ 7 mod 13 (e.g., 42335, 46339, and 8 others).
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
