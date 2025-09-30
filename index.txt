@@ -594,3 +594,38 @@ Two valid ways to form "aba":
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Maximize Subarray-Sum × Pivot Value
+
+Given an array arr of length n, find the maximum possible value of:
+    ( sum(arr[i..j]) ) × arr[k]
+over all choices of indices i, j, k such that 0 ≤ i ≤ k ≤ j < n.
+
+Input Format
+- Line 1: integer n
+- Line 2: n space-separated integers arr[0], arr[1], …, arr[n-1]
+
+Output Format
+- Print a single integer: the maximum value of (sum of a subarray) multiplied by
+  the value at some index k that lies inside that subarray.
+  Use 64-bit arithmetic for safety.
+
+Constraints
+- 1 ≤ n ≤ 5 × 10^5
+- −10^6 ≤ arr[i] ≤ 10^6
+
+Example
+Input
+5
+2 -1 3 -2 4
+Output
+16
+
+Explanation
+Best is to choose subarray [0..4] with sum 6 and k = 4 (arr[k] = 4):
+6 × 4 = 24; but even better is subarray [2..4] with sum 5 and k = 4: 5 × 4 = 20.
+(Your result should be the maximum over all valid (i, j, k); values can be negative too.)
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
