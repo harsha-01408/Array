@@ -629,3 +629,41 @@ Best is to choose subarray [0..4] with sum 6 and k = 4 (arr[k] = 4):
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem — Minimize Spread After 4-Way Split
+
+You are given an integer N and an array X of N integers (X1 … XN).
+Place exactly three cut positions to split X into four **non-empty, contiguous**
+subarrays. Let A, B, C, and D be the sums of those four parts (in order).
+
+Your task is to output the **minimum possible value** of:
+    max(A, B, C, D) − min(A, B, C, D)
+
+Input Format
+• N
+• X1 X2 … XN
+
+Output Format
+• A single integer: the minimum possible value of max(A,B,C,D) − min(A,B,C,D).
+
+Constraints
+• 4 ≤ N ≤ 2⋅10^5
+• 0 ≤ Xi ≤ 10^9
+
+Sample 1
+Input
+5
+4 3 5 2 3
+Output
+2
+Explanation
+Split as (4) | (3) | (5) | (2,3) → A=4, B=3, C=5, D=5 → 5 − 3 = 2.
+
+Sample 2
+Input
+7
+3 2 1 11 12 5 9
+Output
+7
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
