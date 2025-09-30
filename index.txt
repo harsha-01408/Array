@@ -667,3 +667,39 @@ Output
 7
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem — Max Equalizable Count with ±1 Operations
+
+You are given an array A of N integers.
+
+For each element Ai you may perform exactly one of the following:
+• Add 1 to Ai
+• Subtract 1 from Ai
+• Do nothing to Ai
+
+After applying these choices to all elements, you may choose any integer K.
+Count how many elements are equal to K. Your task is to find the **maximum**
+possible count.
+
+Input Format
+• The first line contains a single integer N.
+• The second line contains N integers: A1 A2 … AN.
+
+Constraints
+• 1 ≤ N ≤ 100000
+• 0 ≤ Ai ≤ 100000
+
+Output Format
+• Print a single integer — the maximum possible number of elements that can be made equal to some K.
+
+Sample
+Input
+7
+3 1 4 1 5 9 2
+Output
+4
+Explanation
+Choose K = 2. Values originally equal to 1, 2, or 3 can be turned into 2.
+There are 2 (ones) + 1 (two) + 1 (three) = 4 such elements.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
