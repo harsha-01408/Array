@@ -475,3 +475,40 @@ Pairs (1,4) and (3,4) satisfy the condition (shown above).
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Women Leading
+
+Shakuntala Devi once asked her students sitting in a lecture room to analyze seating rows.
+For each row (a string consisting only of 'W' for Women and 'M' for Men), determine the
+maximum length of a contiguous block that consists of k consecutive 'W' followed immediately
+by k consecutive 'M' (for some k ≥ 1). In other words, find the longest substring of the
+form W^k M^k and report its length (which is 2k). If no such substring exists, print -1.
+
+Input Format
+- The first line contains an integer R — the number of rows.
+- Each of the next R lines contains a string S made up of only 'W' and 'M'.
+
+Output Format
+- For each row, print a single integer: the maximum length of a substring of the form
+  W^k M^k (k ≥ 1); print -1 if it is not possible.
+
+Constraints
+- 1 ≤ R ≤ 10
+- 1 ≤ |S| ≤ 10^5
+
+Sample Input
+2
+WWMMMWMWMMMMMWWWWWWWWMMW
+MMMWW
+
+Sample Output
+6
+-1
+
+Explanation
+Row 1: The longest contiguous block of Women followed by Men with equal counts is "WWWMMM",
+so the length is 6.
+Row 2: There is no substring of the form W^k M^k, hence -1.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
