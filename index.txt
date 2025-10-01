@@ -743,3 +743,34 @@ Answer: 20
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Arranging Numbers (Beautiful Arrangement)
+
+Jayme has the numbers 1..n. A permutation a[1..n] (1-based) is called
+“beautiful” if for every position i (1 ≤ i ≤ n) at least one holds:
+  - a[i] is divisible by i, OR
+  - i is divisible by a[i].
+(i.e., a[i] % i == 0 or i % a[i] == 0)
+
+Task:
+Count how many beautiful permutations of {1, 2, …, n} exist and return that count.
+
+Input
+- A single integer n
+
+Output
+- A single integer: the number of beautiful arrangements
+
+Constraints
+- 1 < n < 20
+
+Example
+Input:
+2
+Output:
+2
+Explanation:
+Permutations [1,2] and [2,1] both satisfy the divisibility condition at each position.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
