@@ -703,3 +703,43 @@ Choose K = 2. Values originally equal to 1, 2, or 3 can be turned into 2.
 There are 2 (ones) + 1 (two) + 1 (three) = 4 such elements.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Playlist Fun Maximization
+
+You have n songs. The i-th song has:
+  - singer[i]: an integer ID of its singer
+  - length[i]: its duration (positive integer)
+
+You may reorder the songs arbitrarily. While listening, the fun gained from the
+t-th played song equals:
+    (# of distinct singers heard among the first t songs) × length of that song.
+
+Goal:
+Choose an order that maximizes the total fun
+    sum_{t=1..n} (distinct_singers_so_far) * length[ song_at_position_t ],
+and return that maximum value.
+
+Constraints
+1 ≤ n ≤ 10^5
+1 ≤ singer[i] ≤ 10^9
+1 ≤ length[i] ≤ 10^9
+
+Example 1
+n = 3
+singer = [1, 2, 2]
+length = [2, 3, 2]
+Optimal order: first song (1,2), third song (2,2), second song (2,3)
+Fun: 1*2 + 2*2 + 2*3 = 2 + 4 + 6 = 12
+Answer: 12
+
+Example 2
+n = 3
+singer = [1, 1, 2]
+length = [5, 4, 3]
+Optimal order: second song (1,4), third song (2,3), first song (1,5)
+Fun: 1*4 + 2*3 + 2*5 = 4 + 6 + 10 = 20
+Answer: 20
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
