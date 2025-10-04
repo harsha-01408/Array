@@ -849,3 +849,38 @@ Output
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Challenge: Longest Symmetric Substring with Replacements
+
+Definition
+A string is called symmetric if its length is even, the first half consists only of '<'
+characters, and the second half consists only of '>' characters.
+Examples of symmetric strings: "" (empty string), "<>", "<<>>", "<<<>>>", ...
+
+Task
+Given a string S consisting of the characters '<', '>' and/or '?', you may replace each
+'?' with either '<' or '>' (independently). Return the length of the longest **contiguous**
+substring of S that can be made symmetric after such replacements.
+
+Function signature
+int solution(string &S);
+
+Examples
+1) S = "<><??>>"
+   After replacing all '?' with '<', we get "<<<<<<>". The longest symmetric substring is "<<>>",
+   so the function should return 4.
+
+2) S = "??????"
+   Replace the first three '?' with '<' and the next three with '>' -> "<<<>>>".
+   The function should return 6.
+
+3) S = "<<"
+   The function should return 2.
+
+Notes
+- |S| is in the range [1 .. 200,000].
+- S contains only the characters '<', '>' and '?'.
+- Aim for an efficient algorithm.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
