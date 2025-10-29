@@ -971,3 +971,30 @@ Note
 - In the third example, increasing the first, fourth, sixth, and seventh elements yields a median of 5.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Time limit: 1.00 s
+Memory limit: 512 MB
+
+Problem — Josephus (k-step elimination)
+
+There are n children (numbered 1..n) standing in a circle. Repeatedly, k children are skipped and then the next child is removed from the circle. Determine the order in which the children are removed.
+
+Input
+The only input line has two integers n and k.
+
+Output
+Print n integers: the removal order.
+
+Constraints
+1 ≤ n ≤ 2 · 10^5
+0 ≤ k ≤ 10^9
+
+Example
+Input:
+7 2
+
+Output:
+3 6 2 7 5 1 4
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
