@@ -1149,3 +1149,50 @@ Ones at positions 1,4,6. Zeros between consecutive ones are 2 and 1, so ways = (
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Title: Unpurchased Categories
+
+There are n items on a website, indexed 0..n-1. The category id of item i is
+category[i] (an integer). There are m customers. Customer j buys every item
+from index l to r inclusive, given as purchase[j] = [l, r].
+
+Task
+Return all DISTINCT category ids for which **no item of that category was ever
+purchased by any customer**. Sort the result in ascending order. If every
+category had at least one item purchased, return [-1].
+
+Function
+vector<int> getUnpurchasedCategories(vector<int> category,
+                                     vector<vector<int>> purchase)
+
+Input (custom testing)
+n
+category[0]
+category[1]
+...
+category[n-1]
+m
+purchase[0][0] purchase[0][1]
+purchase[1][0] purchase[1][1]
+...
+purchase[m-1][0] purchase[m-1][1]
+
+Output
+A line with the desired category ids in ascending order (or -1 if none).
+
+Constraints
+1 ≤ n ≤ 1e5
+1 ≤ category[i] ≤ 1e9
+0 ≤ m ≤ 1e5
+0 ≤ purchase[j][0] ≤ purchase[j][1] < n
+
+Example
+n = 5
+category = [1, 2, 5, 4, 5]
+m = 3
+purchase = [[0, 1], [0, 2], [1, 2]]
+
+Items purchased cover indices {0,1,2}; thus categories purchased are {1,2,5}.
+Category 4 never appears among purchased indices → answer: [4].
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
