@@ -1196,3 +1196,49 @@ Items purchased cover indices {0,1,2}; thus categories purchased are {1,2,5}.
 Category 4 never appears among purchased indices → answer: [4].
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Title: Assign Requests to Least-Loaded Servers
+
+You have N servers labeled 1..N. Initially, each server’s total load is 0.
+There are M incoming requests; the i-th request has load requests[i].
+
+Assignment rule for each request (in order):
+1) Choose the server with the smallest current total load.
+2) If multiple servers tie, choose the one with the smallest label.
+3) Assign the request to that server and increase that server’s load by the request’s load.
+
+Task
+Return an array of length M where the i-th element is the label of the server that handles the i-th request.
+
+Input (for custom testing)
+N
+M
+requests[0] requests[1] ... requests[M-1]
+
+Output
+M lines, each with the label (1..N) of the server that handled the corresponding request.
+
+Constraints
+1 ≤ N ≤ 2 * 10^5
+1 ≤ M ≤ 2 * 10^5
+0 ≤ requests[i] ≤ 10^9
+
+Notes / Hint
+Use a min-heap (priority queue) of (current_load, label) to always pop the least-loaded server; this
+automatically breaks ties by smallest label.
+
+Example
+Input
+2
+2
+5 5
+Output
+1
+2
+Explanation:
+Start loads: (0,#1), (0,#2). First request -> #1 (tie broken by smallest label).
+Loads become (5,#1), (0,#2). Second request -> #2. Final assignment sequence: [1, 2].
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
