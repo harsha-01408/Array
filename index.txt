@@ -1106,3 +1106,46 @@ Total = 5.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Title: One-Block Partitions
+
+You are given a binary array Arr of length N (elements are only 0 or 1).
+
+Definition:
+A “One block” is a continuous subarray that contains exactly one element equal to 1.
+
+Task:
+Partition the entire array Arr into contiguous blocks so that every block is a One block.
+Return the total number of different valid partitions. If it is impossible, return 0.
+
+Notes:
+- Blocks must cover the whole array without overlap.
+- Two partitions are different if they place at least one cut in a different position.
+
+Input
+- N : integer, the size of the array (1 ≤ N ≤ 100)
+- Arr : N space-separated integers (each 0 or 1)
+
+Output
+- A single integer: the number of ways to divide the array into One blocks.
+
+Example 1
+Input
+3
+0 1 0
+Output
+1
+Explanation
+The only valid partition is the whole array [0,1,0], which contains exactly one ‘1’.
+
+Example 2
+Input
+6
+1 0 0 1 0 1
+Output
+6
+Explanation
+Ones at positions 1,4,6. Zeros between consecutive ones are 2 and 1, so ways = (2+1)*(1+1) = 6.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
