@@ -1242,3 +1242,45 @@ Loads become (5,#1), (0,#2). Second request -> #2. Final assignment sequence: [1
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem Statement:
+You are given an integer array arr of length n.
+You can perform the following operation exactly k times:
+
+1. Choose any index i (0 ≤ i < n) and add arr[i] to your total score.
+2. After choosing i, discard either all elements to the left of i (arr[0..i−1])
+   or all elements to the right of i (arr[i+1..n−1]).
+   The remaining part becomes the new array for the next operation.
+
+Your task is to maximize the total score after exactly k operations.
+
+Example:
+Input:
+n = 6
+arr = [4, 6, -10, -1, 10, -20]
+k = 4
+
+Process:
+1. Choose arr[4] = 10 → keep left → arr = [4, 6, -10, -1], score = 10
+2. Choose arr[0] = 4 → keep right → arr = [6, -10, -1], score = 14
+3. Choose arr[0] = 6 → keep right → arr = [-10, -1], score = 20
+4. Choose arr[1] = -1 → keep right → arr = [ ], score = 19
+
+Output:
+19
+
+Explanation:
+Each time you pick an element, you can only continue from one side.
+However, any subset of k elements can be picked if you always choose
+from the extremes of your target indices.
+Therefore, the maximum total score equals the sum of the k largest
+elements in the array.
+
+Constraints:
+1 ≤ n ≤ 10⁵
+−10⁹ ≤ arr[i] ≤ 10⁹
+1 ≤ k ≤ n
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
