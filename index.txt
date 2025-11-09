@@ -1319,3 +1319,65 @@ All odd-length subarrays are beautiful. Among even-length subarrays, only those 
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Minimum Shifts
+
+Given an n×m binary matrix mat (provided as an array of strings of length m),
+you may perform row operations. In one operation you can cyclically shift a single
+row by 1 position either to the left or to the right (wrapping around). Each 1-step
+shift counts as cost 1.
+
+Task:
+Find the minimum total number of shifts needed so that there exists at least one
+column whose cells are all '1'. If it is impossible, return -1.
+
+Notes:
+• mat[i] is the i-th row; all rows have equal length m.
+• A cyclic left shift moves each character one position left and the first character
+  goes to the end. A cyclic right shift moves each character one position right and
+  the last character goes to the front.
+
+Function to implement:
+int findMinimumShifts(vector<string> mat);
+
+Return:
+An integer — the minimum number of shifts required to make at least one column
+all '1', or -1 if not possible.
+
+Constraints:
+1 ≤ n ≤ 10000
+1 ≤ m ≤ 1000
+Each mat[i] consists only of characters '0' and '1'.
+
+Input format (for custom testing):
+Line 1: n
+Next n lines: each line is a binary string of length m describing a row of the matrix.
+
+Output (for custom testing):
+Single integer — the answer.
+
+Example 1:
+Input
+4
+0101
+1010
+0100
+0001
+Output
+3
+Explanation
+Rotate row 1 right (0101→1010), row 3 right (0100→0010), row 4 left (0001→0010).
+Then column 3 becomes all '1'. Total shifts = 3.
+
+Example 2:
+Input
+3
+111
+101
+000
+Output
+-1
+Explanation
+The third row is all zeros, so no column can be made all '1'.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
