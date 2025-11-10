@@ -1427,3 +1427,52 @@ Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Question: countBalancedNumbers — Balanced Numbers in a Permutation
+
+You are given a permutation p of length n (i.e., it contains each integer
+from 1 to n exactly once in any order).
+
+A number k (1 ≤ k ≤ n) is called balanced if there exist indices l and r
+(1 ≤ l ≤ r ≤ n) such that the subarray p[l], p[l+1], …, p[r] is a permutation
+of the numbers {1, 2, …, k}. In other words, within some contiguous segment
+of p you can find all numbers 1..k exactly once.
+
+For each k from 1 to n, determine whether k is balanced. Return a binary
+string of length n where the i-th character is ‘1’ if i is balanced and ‘0’
+otherwise.
+
+Input
+- First line: integer n
+- Second line: n integers — the permutation p1 … pn
+
+Output
+- A single line containing the binary string described above.
+
+Constraints
+- 1 ≤ n ≤ 2 × 10^5
+- 1 ≤ p[i] ≤ n
+- All p[i] are distinct.
+
+Example
+n = 4
+p = [4, 1, 3, 2]
+Balanced numbers are 1, 3, and 4 (but not 2), so the output is:
+1011
+
+Sample 0
+Input:
+5
+5 3 1 2 4
+Output:
+11111
+
+Sample 1
+Input:
+4
+1 4 2 3
+Output:
+1001
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
