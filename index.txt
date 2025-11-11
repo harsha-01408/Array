@@ -1680,3 +1680,108 @@ So, the total cost = 2 + 1 = 3.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Code Question 1 - Amazon Subscription Model
+
+Amazon is designing a new subscription model for its cloud services. 
+The company offers n types of base plans, with their respective costs 
+stored in an array planCost, and m types of additional features, each 
+with its own cost stored in an array featureCost.
+
+Customers can select one base plan and one additional feature. The 
+total subscription cost is the sum of the base plan's cost and the 
+feature's cost.
+
+However, there are X specific combinations of base plans and features 
+that are not allowed due to technical restrictions. These incompatible 
+combinations are represented by two arrays, incompatiblePlans and 
+incompatibleFeatures, where incompatiblePlans[i] and incompatibleFeatures[i] 
+represent the base plan and the additional feature that cannot be paired 
+together (in 1-based indexing).
+
+Out of all possible valid combinations of a base plan and an additional 
+feature, the task is to find the maximum cost of any valid combination.
+
+Note: The constraints guarantee that there will always be at least one 
+valid combination available.
+
+Example:
+n = 2
+m = 2
+X = 1
+planCost = [5, 10]
+featureCost = [2, 6]
+incompatiblePlans = [1]
+incompatibleFeatures = [2]
+
+Exploring all the possible valid combinations of a base plan and an 
+additional feature (1-based indexing):
+
+| Base Plan | Additional | Is          | Total         |
+| Index-(i) | Feature    | Combination | Subscription  |
+|           | Index-(j)  | Valid?      | Cost          |
+|-----------|------------|-------------|---------------|
+| 1         | 1          | Yes         | 5 + 2 = 7     |
+| 1         | 2          | No          | -             |
+| 2         | 1          | Yes         | 10 + 2 = 12   |
+| 2         | 2          | Yes         | 10 + 6 = 16   |
+
+Out of all the possible valid combinations, the maximum subscription 
+cost possible is 16.
+
+Another Example:
+n = 3
+m = 2
+X = 2
+planCost = [2, 1, 5]
+featureCost = [1, 6]
+incompatiblePlans = [1, 2]
+incompatibleFeatures = [1, 2]
+
+Sample Output: 7
+
+Explanation:
+Exploring all the possible valid combinations of a base plan and an 
+additional feature (1-based indexing):
+
+| Base Plan | Additional | Is          | Total         |
+| Index-(i) | Feature    | Combination | Subscription  |
+|           | Index-(j)  | Valid?      | Cost          |
+|-----------|------------|-------------|---------------|
+| 1         | 1          | No          | -             |
+| 1         | 2          | Yes         | 2 + 6 = 8     |
+| 2         | 1          | Yes         | 1 + 1 = 2     |
+| 2         | 2          | No          | -             |
+| 3         | 1          | Yes         | 5 + 1 = 6     |
+| 3         | 2          | No          | -             |
+
+Out of all the possible valid combinations, the maximum subscription 
+cost possible is 7.
+Hence, the answer is 7.
+
+Function Description:
+Complete the function getMaximumCost in the editor below.
+
+Function Parameters:
+- int planCost[n]: the base prices of the subscription plans
+- int featureCost[m]: the costs of the additional features
+- int incompatiblePlans[X]: the indices of the incompatible 
+  subscription plans
+- int incompatibleFeatures[X]: the indices of the incompatible 
+  features
+
+Returns:
+- int: the maximum cost of a valid combination
+
+Constraints:
+- 2 ≤ n, m ≤ 10^5
+- 1 ≤ X ≤ min(2 * 10^5, (n * m) - 1)
+- 1 ≤ planCost[i], featureCost[i] ≤ 10^9
+- 1 ≤ incompatiblePlans[i] ≤ n
+- 1 ≤ incompatibleFeatures[i] ≤ m
+- The pair (incompatiblePlans[i], incompatibleFeatures[i]) is unique 
+  for every i.
+- At least one valid combination always exists.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
