@@ -1785,3 +1785,89 @@ Constraints:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Code Question 2 - Amazon Data Distribution Algorithm
+
+The developers at Amazon are working on an algorithm for their data 
+distribution over regions based on a parameter called affinity defined 
+for each data place. There are n (n is even) different data places 
+where the affinity parameter of the ith place is represented by 
+affinity[i]. The data needs to be distributed over 2 regions, namely 
+regionA and regionB. In each step of the algorithm, a region is 
+chosen and then a data place is migrated to that region. The same 
+region cannot be chosen in consecutive steps. Each time a region is 
+selected, it is configured to maximize the total affinity of data it will 
+store and decides which data place to choose accordingly.
+
+Moreover, there are certain pre-defined rules for the data distribution 
+represented by m unique pairs of indices, the indexes follow 1-based 
+indexing in the input, in a matrix rules. For each unique pair (x, y), if 
+the data piece present at the indices x or y is selected for a region, 
+the other must be selected for the next region in the next step 
+mandatorily.
+
+Find the maximum possible sum of memory stored in regionA.
+
+Example:
+Given n = 6, affinity = [3, 2, -4, 8, 3, -7], m = 2, rules = [[2, 4], [3, 6]]
+
+| Region | Affinity | Reason |
+|--------|----------|--------|
+| A      | -4       | Forces regionB to choose -7 because of rule (3, 6) |
+| B      | -7       | Forced by rule (3, 6) |
+| A      | 8        | Forces regionB to choose 2 because of rule (2, 4) |
+| B      | 2        | Forced by rule (2, 4) |
+| A      | 3        | Maximum affinity out of the remaining |
+| B      | 3        | Last available data piece |
+
+The total affinity of regionA = (-4) + 8 + 3 = 7, which is the maximum 
+possible sum of memory stored in regionA.
+
+Sample Case 0:
+n = 4
+affinity = [1, 2, 3, 4]
+m = 1
+rules = [[4, 2]]
+
+Sample Output: 7
+
+Explanation:
+For the regionA, the indices of the data places are chosen in the 
+order [4, 3]. This will force the regionB to choose the data places at 
+the indices in the order [2, 1].
+The maximum possible affinity for regionA is 4 + 3 = 7.
+
+Sample Case 1:
+n = 6
+affinity = [1, 2, 3, 4, 5, 6]
+m = 3
+rules = [[4, 2], [3, 4], [5, 6]]
+
+Sample Output: 12
+
+Explanation:
+For the regionA, the indices of the data places are chosen in the 
+order [6, 4, 2]. This will force the regionB to choose the data places at 
+the indices in the order [5, 3, 1].
+The maximum possible affinity for regionA is 6 + 4 + 2 = 12.
+
+Function Description:
+Complete the function maximumAffinity in the editor below.
+maximumAffinity has the following parameters:
+- int affinity[n]: the affinity parameter for different data places
+- int rules[m][2]: the different pair of indices, rules[i][0] and rules[i][1] 
+  denote the i-th unique pair.
+
+Returns:
+- long int: the maximum possible affinity for regionA.
+
+Constraints:
+- 2 ≤ n ≤ 10^5, n is even.
+- -10^9 ≤ affinity[i] ≤ 10^9
+- 1 ≤ m ≤ n/2
+- 1 ≤ rules[i][j] ≤ N
+- All the values in rules are distinct.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
