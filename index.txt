@@ -1527,3 +1527,35 @@ Final survivors: Robot 3 [2, 0] and Robot 4 [12, 0]
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Amazon has N packages lined up for delivery.
+The weight of the i-th package is given by arr[i].
+
+A delivery team wants to analyze performance by checking
+continuous groups of packages where the average package
+weight is greater than or equal to K.
+
+Your task is to find the number of such continuous subarrays
+that satisfy this condition.
+
+Example:
+N = 5, K = 4
+arr = [3, 4, 5, 6, 2]
+
+Output: 12
+
+The continuous groups of packages with average weight >= 4
+are: [3,4,5], [4,5], [4,5,6], [5,6], [6], [3,4,5,6], [4,5,6,2], [3,4,5,6,2].
+
+Constraints:
+1 ≤ N ≤ 100000
+1 ≤ arr[i], K ≤ 10^9
+
+Input Format:
+The first line contains two integers N and K — the number of
+packages and the threshold average weight.
+
+The second line contains N integers representing the weights
+of the packages.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
