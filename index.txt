@@ -1476,3 +1476,54 @@ Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem Summary
+You have N robots in a line, each with:
+
+Health (positive integer)
+Direction (0 = left, 1 = right)
+
+Rules
+
+Robots move simultaneously in their directions
+When two robots collide (moving towards each other):
+
+The robot with less health is knocked out
+The robot with more health continues with health reduced by opponent's health
+If same health, both are knocked out
+
+
+Robots never change direction
+
+Input
+
+N: number of robots
+A: 2D array of size N×2
+
+A[i][0] = health of robot i
+A[i][1] = direction of robot i (0=left, 1=right)
+
+
+
+Output
+Return a 2D array with [health, direction] of surviving robots in their original order (1 to N).
+Example
+Input:
+
+N = 4
+A = [[39, 1], [20, 0], [21, 0], [12, 0]]
+
+Output:
+
+[[2, 0], [12, 0]]
+
+Explanation:
+
+Robot 1 (health 39, right) collides with Robot 2 (health 20, left) → Robot 1 survives with 19 health
+Robot 1 (health 19, right) collides with Robot 3 (health 21, left) → Robot 3 survives with 2 health
+Robot 3 (health 2, left) and Robot 4 (health 12, left) both move left, never collide
+Final survivors: Robot 3 [2, 0] and Robot 4 [12, 0]
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
