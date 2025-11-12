@@ -1944,3 +1944,41 @@ Choose x = 3. After the operation, the array becomes [0, 0, 2], which is already
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
+Problem: Time to Remove All "01" Substrings
+
+You are given a binary string s consisting of characters '0' (red) and '1' (blue).
+A process runs in discrete seconds. At each second, ALL substrings equal to "01"
+that are present in s are simultaneously replaced with "10".
+Repeat this each second until there is no "01" left in s.
+
+Task
+Return the total number of seconds required for the process to stop.
+
+Input
+- A single line containing the binary string s (1 ≤ |s| ≤ 2e5).
+
+Output
+- A single integer: the number of seconds until no "01" remains.
+
+Example 1
+Input
+0101
+Output
+2
+Explanation
+t=0: 0101  (two "01" at positions 0 and 2)
+t=1: 1010
+t=2: 1100  (no "01" → stop)
+
+Example 2
+Input
+1111
+Output
+0
+Explanation
+No "01" exists initially.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
