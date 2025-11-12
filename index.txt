@@ -1907,3 +1907,40 @@ p is a permutation of integers 1...n
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
+Problem: Minimum Operations to Sort by Zeroing Values
+
+You are given an array a of length n.
+You may perform the following operation any number of times:
+
+Operation:
+- Choose any integer x.
+- For all indices i with a[i] = x, set a[i] = 0 (all such positions change in one operation).
+
+Goal:
+Find the minimum number of operations needed to make the array sorted in non-decreasing order.
+
+Input Format
+- The first line contains an integer n — the length of the array.
+- The second line contains n integers a1, a2, ..., an — the array elements.
+
+Output Format
+- Print a single integer — the minimum number of operations required to make the array non-decreasing.
+
+Constraints
+- 1 < n ≤ 10^3
+- 1 ≤ ai ≤ n
+
+Sample Input
+3
+3 3 2
+
+Sample Output
+1
+
+Explanation
+Choose x = 3. After the operation, the array becomes [0, 0, 2], which is already non-decreasing. Hence, only 1 operation is needed.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
