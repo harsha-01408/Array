@@ -1871,3 +1871,39 @@ Constraints:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+🚖 Uber SDE-1 Interview Question: Median in Prefix Subarrays
+Problem Context
+Uber’s data analytics team is studying the dynamic stability of their driver ratings system.
+ Each driver receives a unique rating (a permutation of integers from 1 to n), representing the relative performance among n drivers.
+The team wants to analyze how the set of possible median ratings evolves as new drivers join one by one.
+
+Task
+You are given a permutation p of size n, where p[i] represents the rating of the i-th driver joining the system.
+For each prefix of this permutation (i.e., first i drivers), determine f(i) — the count of distinct ratings among the first i drivers that can act as a median of at least one subarray completely contained within that prefix.
+Formally, for each i (1 ≤ i ≤ n):
+f(i) = number of distinct elements x in p[1...i] such that x is the median of some subarray of p[1...i] and size of subarray>=2 
+You must output all f(1), f(2), ..., f(n).
+Median Definition
+For a subarray of size m:
+If m is odd, the median is the element at position (m + 1) / 2 after sorting.
+If m is even, the median is the element at position m / 2 after sorting (i.e., the lower median)
+Example
+Input:
+5
+3 1 4 5 2
+
+Output:
+
+0 1 2 3 
+
+Constraints
+1 ≤ n ≤ 2 × 10^5
+
+1 ≤ p[i] ≤ n
+
+p is a permutation of integers 1...n
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
