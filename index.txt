@@ -2067,3 +2067,46 @@ Constraints
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Stone Game – stoneDifference
+
+You are given an integer n and an array stones of length n, where stones[i] is the value of the i-th stone.
+
+Two players A and B play a game. A moves first, then they alternate turns.
+
+On each turn, the current player must choose exactly ONE stone to remove from the array, but only from one of the two ends:
+- Either remove the leftmost stone, or
+- Remove the rightmost stone.
+
+Let S be the sum of the values of all stones that remain AFTER the chosen stone is removed.
+The current player’s score for that move increases by S.
+
+The game continues until there are no stones left.
+
+Both players play optimally, each trying to maximize their own final total score.
+
+Your task:
+Return the final score difference between A and B, defined as:
+    (total score of A) – (total score of B),
+assuming both play optimally.
+
+Examples:
+
+Example 1:
+Input:
+n = 5
+stones = [5, 3, 1, 4, 2]
+
+Output:
+6
+
+Example 2:
+Input:
+n = 8
+stones = [7, 90, 5, 1, 100, 10, 10, 2]
+
+Output:
+122
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
