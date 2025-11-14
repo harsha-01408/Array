@@ -1981,4 +1981,60 @@ No "01" exists initially.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+ Question 
 
+For each word in a list, determine the minimum number of character replacements needed so that no two adjacent characters are the same.
+If any two adjacent characters in a string are equal, one of them must be changed. Calculate the minimum number of substitutions required for each word.
+
+Example
+words = ["add", "boook", "break"]
+
+"add": change one 'd' (1 change)
+"boook": change the middle 'o' (1 change)
+"break": no changes necessary (0 changes)
+
+The return array is [1, 1, 0].
+
+Function Description
+Complete the function minimalOperations in the editor with the following parameter:
+
+string words[n]: an array of strings
+
+Returns
+int[n]: each element i is the minimum number of substitutions for words[i].
+
+Constraints
+1 ≤ n ≤ 100
+2 ≤ length of words[i] ≤ 10^5
+Each character of words[i] is in the range ascii[a-z].
+
+--------------------------------
+Sample Case 0
+--------------------------------
+
+Sample Input 0
+5
+ab
+aab
+abb
+abab
+abaaaba
+
+Sample Output 0
+0
+1
+1
+0
+1
+
+Explanation 0
+words[0] = "ab" is already acceptable, so 0 replacements are needed.
+words[1] = "aab" is not acceptable. Replace an 'a' with an appropriate character, so 1 replacement.
+words[2] = "abb" is not acceptable. Replace a 'b' with an appropriate character, again 1 replacement.
+words[3] = "abab" is already acceptable, so 0 replacements are needed.
+words[4] = "abaaaba" is not acceptable. Replace the middle 'a' in "aaa", 1 replacement.
+
+The return array is [0, 1, 1, 0, 1].
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
