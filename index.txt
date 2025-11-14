@@ -2110,3 +2110,38 @@ Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+The Dungeon Escape Challenge – findSafeWalk
+
+You are given:
+- An m x n binary matrix grid.
+- An integer health representing your starting health.
+
+Grid rules:
+- grid[i][j] = 0 → safe cell, your health does not change when you step here.
+- grid[i][j] = 1 → trap cell, you lose 1 health when you step here.
+
+You start at the top-left cell (0, 0) with initial health.
+You want to reach the bottom-right cell (m - 1, n - 1).
+
+Movement rules:
+- From a cell (i, j), you may move to one of its 4-directionally adjacent neighbors:
+  - Up:    (i - 1, j)
+  - Down:  (i + 1, j)
+  - Left:  (i, j - 1)
+  - Right: (i, j + 1)
+- You may not move outside the grid.
+- When you step onto a trap cell (value 1), your health decreases by 1.
+- Your health must always remain strictly greater than 0.
+  - If at any point your health becomes 0 or negative, you die and that path is invalid.
+
+Task:
+Among all valid paths from (0, 0) to (m - 1, n - 1) that never let your health be ≤ 0:
+- Compute the maximum possible remaining health when you arrive at (m - 1, n - 1).
+
+Return:
+- The maximum remaining health at (m - 1, n - 1), if there exists at least one valid path.
+- If there is no valid path that keeps you alive, return -1.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
