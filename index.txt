@@ -2145,3 +2145,96 @@ Return:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Code Question 1 – System Stability Risk
+
+Amazon is launching a resource optimization feature that includes an advanced
+diagnostic program to detect potential system vulnerabilities. The framework
+manages n active services, each with a unique Service Identifier (SID).
+
+The diagnostic program evaluates the overall system stability using this
+algorithm:
+  • It analyzes all contiguous subarrays of SIDs represented by the array service_id.
+  • For each subarray, it calculates the sum of the SIDs and divides this sum
+    by a constant integer modulus.
+  • The remainder obtained from this division is compared to the number of
+    services (length) in that subarray.
+  • A subarray is flagged as vulnerable if:
+        (sum of SIDs in the subarray) % modulus == (number of elements in subarray)
+  • The overall system stability risk is the total count of such flagged
+    contiguous subarrays.
+
+Formally:
+  • You are given an array service_id of size n.
+  • You are also given an integer modulus.
+  • Your task is to compute and return the system's stability risk level, i.e.,
+    the number of vulnerable contiguous subarrays.
+
+Notes:
+  • Remainder is defined as the remaining part after division.
+    For example, the remainder of 13 with 5 is 3.
+  • A subarray is a continuous portion of an array, e.g., in [5, 7, 9, 11],
+    possible subarrays include [5], [5, 7], [7, 9, 11], [11], etc.
+
+Function Description:
+  Complete the function determineStabilityRisk:
+
+      long determineStabilityRisk(vector<int> service_id, int modulus);
+
+  Parameters:
+    • service_id: vector<int> of size n, SIDs of the services.
+    • modulus: integer used to compute the remainder.
+
+  Returns:
+    • long: the overall stability risk of the system (count of vulnerable
+      contiguous subarrays).
+
+Constraints:
+  • 1 ≤ n ≤ 2 × 10^5
+  • 1 ≤ service_id[i] ≤ 10^9
+  • 1 ≤ modulus ≤ 10^9
+
+Input format for custom testing (STDIN):
+  n
+  service_id[0]
+  service_id[1]
+  ...
+  service_id[n-1]
+  modulus
+
+Sample Case 0:
+  Input:
+    5
+    1
+    4
+    2
+    3
+    5
+    100
+
+  Output:
+    1
+
+  Explanation:
+    There is only one vulnerable subarray: [1].
+    sum = 1, length = 1, 1 % 100 = 1 → equals length, so it is flagged.
+
+Sample Case 1:
+  Input:
+    3
+    2
+    2
+    2
+    2
+
+  Output:
+    0
+
+  Explanation:
+    All subarrays have sum that is a multiple of 2, so remainder is always 0.
+    Length is at least 1, so remainder never equals length.
+    Hence, no subarray is vulnerable, stability risk = 0.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
