@@ -2238,3 +2238,33 @@ Sample Case 1:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+You are managing a row of building structures with varying heights represented by an
+array `structures`. You want to transform these structures into a harmonious pattern
+where each structure differs from its adjacent neighbors by exactly one unit in
+height, forming either an ascending or descending sequence.
+
+To modify the structures, you can only add one unit of height to any structure in a
+single operation. Your goal is to determine the minimum number of operations needed
+to achieve either an ascending or descending stepwise pattern – whichever requires
+fewer operations.
+
+Example
+
+• For `structures = [1, 4, 3, 2]`, the output should be `solution(structures) = 4`.
+
+  The optimal approach is to add:
+    - Four units to the first structure.
+
+  The final heights will be: `[5, 4, 3, 2]`, forming a descending stepwise pattern.
+
+• For `structures = [5, 7, 9, 4, 11]`, the output should be
+  `solution(structures) = 9`.
+
+  The optimal approach is to add;
+
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
