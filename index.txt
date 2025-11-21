@@ -2268,3 +2268,71 @@ Example
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem: Maximum System Memory Capacity
+
+The developers at Amazon are working on optimizing the capacity of their cloud system. In the system, there are n servers where the memory capacity of the i-th server is represented by the array memory[i].
+
+A system configuration always contains an even number of servers. If the system has 2x servers in use, then:
+- x of them are chosen as primary servers, and
+- the other x are chosen as backup servers.
+
+For each primary server P there must exist a backup server B such that:
+    memory[B] ≥ memory[P]
+
+Each server can be used at most once (either as a primary, or as a backup, or not used at all).
+
+The system memory capacity of a configuration is defined as the sum of the memory capacities of all the primary servers.
+
+Given n and the array memory, find the maximum possible system memory capacity that can be obtained by choosing some valid set of primary and backup servers.
+
+Function Description (C++):
+    long maximumCapacity(vector<int> memory);
+
+Parameters:
+    memory: an integer array, where memory[i] is the memory capacity of the i-th server.
+
+Returns:
+    long: the maximum system memory capacity.
+
+Constraints:
+    2 ≤ n ≤ 2 * 10^5
+    1 ≤ memory[i] ≤ 10^9
+
+Examples:
+
+Example 1:
+Input:
+    n = 4
+    memory = [1, 2, 1, 2]
+Output:
+    3
+Explanation:
+    We can choose servers with memory 1 and 2 as primaries,
+    and use the remaining 1 and 2 as their backups.
+    The primary capacities are 1 and 2, so the total capacity is 3.
+
+Example 2:
+Input:
+    n = 3
+    memory = [1, 2, 1]
+Output:
+    1
+Explanation:
+    We can choose the server with memory 1 as primary
+    and the server with memory 2 as backup (2 ≥ 1).
+    The total capacity is 1. Any configuration with 2 primaries is impossible,
+    because there would not be enough backup servers of sufficient capacity.
+
+Example 3:
+Input:
+    n = 5
+    memory = [2, 4, 3, 1, 2]
+Possible valid configurations include:
+    - Primary: 2, 3; Backup: 4, 2  → capacity = 5
+    - Primary: 2, 4; Backup: 3, 2  → capacity = 6 is NOT valid because 3 < 4.
+The maximum achievable capacity is 5.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
