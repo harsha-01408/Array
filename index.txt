@@ -2336,3 +2336,57 @@ The maximum achievable capacity is 5.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+You need to hire developers for a project that requires exactly N
+front-end developers and exactly M back-end developers. There are
+(N + M) candidates who applied.
+
+Each candidate can work either on the front-end or on the back-end, 
+but not both.
+
+Each candidate has two associated costs:
+
+F[i]: the cost if the candidate works on the front-end
+B[i]: the cost if the candidate works on the back-end
+
+Your task is to determine the minimum total cost to assign exactly
+
+N candidates as front-end developers
+M candidates as back-end developers
+
+All candidates must be assigned exactly one role (either FE or BE).
+
+Input Format
+The first line contains an integer T — the number of test cases.
+
+For each test case:
+An integer N — number of front-end developers required.
+An integer M — number of back-end developers required.
+A list F of length (N + M) — F[i] values.
+A list B of length (N + M) — B[i] values.
+
+Output Format
+For each test case, print a single integer: the minimum possible
+total cost.
+
+Constraints
+1 ≤ T ≤ 10
+1 ≤ N, M ≤ 10^4
+1 ≤ F[i], B[i] ≤ 10^4
+
+Example:
+Input:
+2
+1 1
+1 2
+2 1
+1 2
+1 1 1
+1 1 1
+
+Output:
+2
+3
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
