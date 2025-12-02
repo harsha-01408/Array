@@ -2499,3 +2499,22 @@ affinity = [2, 1, 1, 1, 2]
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Problem Description
+
+AWS provides scalable systems. A set of n servers are used for horizontally
+scaling an application. The goal is to have the computational power of the
+servers in non-decreasing order.
+
+To do so, you can increase the computational power of each server in any
+contiguous segment by x (x ≥ 0). You may perform this operation any number of
+times on any segments. Choose the values of x for these operations such that,
+after all operations, the computational powers are in non-decreasing order and
+the sum of all chosen x values is minimum.
+
+Complete the function findMinimumSum in the editor below.
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
