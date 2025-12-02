@@ -2473,3 +2473,29 @@ Sample Output 4
 10
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Software developed these days is subject to frequent cyber attacks.
+
+To prevent the attacks from succeeding, the security team at Amazon ensures the security
+of its systems by running tests against n files, where the i-th file has size fileSize[i]
+and there are n viruses.
+
+The i-th virus attacks the i-th file and is only effective against a file with size
+affinity[i]. To minimize the damage caused, the team performs certain operations.
+
+In one operation, the team can choose 2 files, i and j, and swap their sizes,
+i.e., fileSize[i] and fileSize[j].
+
+Given the sizes of files and the viruses' affinities, find the minimum number of
+operations performed such that fileSize[i] != affinity[i] for each file from 1 to n.
+If it is not possible to do so after any number of operations, return -1.
+
+Example:
+Consider the number of files to be n = 5,
+fileSize = [2, 2, 1, 1, 2]
+affinity = [2, 1, 1, 1, 2]
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
