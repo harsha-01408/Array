@@ -2593,3 +2593,93 @@ abc, cab, abccab, bccaba and ccabab.
 
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+You are given an interaction log as an array `log` of length `n` and an integer `iterations`.
+
+You need to perform the following operation exactly `iterations` times:
+
+For each operation index `i` (0-based):
+
+    i1 = i % n
+    i2 = n - 1 - i1
+
+    log[i1] = log[i1] XOR log[i2]
+
+where XOR is the bitwise exclusive OR operation.
+
+After performing all `iterations` operations, return the final state of the array `log`.
+
+----------------------------------------------------
+Details of the operation:
+
+- `i1` walks from left to right repeatedly:
+      0, 1, 2, ..., n-1, 0, 1, 2, ...
+
+- `i2` is the mirrored index of `i1` from the right:
+      i2 = n - 1 - i1
+  so pairs are: (0, n-1), (1, n-2), (2, n-3), ...
+
+- On each step `i`, only `log[i1]` is updated:
+      log[i1] = log[i1] XOR log[i2]
+  `log[i2]` is not directly changed in that step.
+
+Your task is to compute the final array efficiently. Note that `iterations`
+can be as large as 10^12, so a simple loop from 0 to `iterations - 1`
+will be too slow and will not pass all test cases.
+
+You must return the resulting array after all operations.
+
+----------------------------------------------------
+Example 1:
+
+Input:
+    n = 4
+    log = [5, 6, 7, 8]
+    iterations = 3
+
+Process:
+    i = 0:
+        i1 = 0 % 4 = 0
+        i2 = 4 - 1 - 0 = 3
+        log[0] = 5 XOR 8 = 13
+        log becomes [13, 6, 7, 8]
+
+    i = 1:
+        i1 = 1 % 4 = 1
+        i2 = 4 - 1 - 1 = 2
+        log[1] = 6 XOR 7 = 1
+        log becomes [13, 1, 7, 8]
+
+    i = 2:
+        i1 = 2 % 4 = 2
+        i2 = 4 - 1 - 2 = 1
+        log[2] = 7 XOR 1 = 6
+        log becomes [13, 1, 6, 8]
+
+Output:
+    [13, 1, 6, 8]
+
+----------------------------------------------------
+Example 2:
+
+Input:
+    n = 3
+    log = [6, 1, 9]
+    iterations = 7
+
+After performing 7 operations as per the rules, the final array is:
+    [6, 0, 15]
+
+Output:
+    [6, 0, 15]
+
+----------------------------------------------------
+Function to implement (C++ style):
+
+    vector<int> updateInteractionLog(vector<int> log, long long iterations);
+
+The function should return the final state of `log` after `iterations` operations.
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
