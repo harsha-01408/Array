@@ -2720,3 +2720,64 @@ Constraints
 - 1 <= nums[i] <= 10^9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+E - Minimum Swap
+Time Limit: 2 sec / Memory Limit: 1024 MiB
+
+Score:
+475 points
+
+Problem Statement
+You are given an integer sequence
+P = (P1, P2, ..., PN) that is a permutation of (1, 2, ..., N). Here, it is guaranteed that
+P is not equal to (1, 2, ..., N).
+
+You want to perform the following operation zero or more times to make
+P match the sequence (1, 2, ..., N):
+
+Choose a pair of integers (i, j) satisfying 1 <= i < j <= N. Swap the values of Pi and Pj.
+Let K be the minimum number of operations required to make P match the sequence (1, 2, ..., N).
+
+Find the number of operations that can be the first operation in a sequence of operations that makes P match
+the sequence (1, 2, ..., N) in K operations. Two operations are distinguished if and only if the chosen pairs
+of integers (i, j) are different.
+
+Constraints
+2 <= N <= 3 * 10^5
+1 <= Pi <= N (1 <= i <= N)
+Pi != Pj (1 <= i < j <= N)
+There exists 1 <= i <= N such that i != Pi
+All input values are integers.
+
+Input
+The input is given from Standard Input in the following format:
+
+N
+P1 P2 ... PN
+
+Output
+Print the answer.
+
+Sample Input 1
+5
+3 1 4 2 5
+
+Sample Output 1
+6
+
+Sample Input 2
+2
+2 1
+
+Sample Output 2
+1
+
+Sample Input 3
+20
+15 5 13 17 9 11 20 4 14 16 6 3 8 19 12 7 10 18 2 1
+
+Sample Output 3
+77
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
