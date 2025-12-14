@@ -2781,3 +2781,68 @@ Sample Output 3
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+F - 1122 Subsequence 2
+Time Limit: 2 sec / Memory Limit: 1024 MiB
+
+Score :
+500 points
+
+Problem Statement
+You are given a string S consisting of digits.
+
+A string T is called a 1122-string if it satisfies all of the following conditions. (The definition is the same as in Problem C.)
+
+- T is a non-empty string consisting of digits.
+- |T| is even, where |T| denotes the length of string T.
+- All characters from the 1st through the |T|/2-th character of T are the same digit.
+- All characters from the (|T|/2 + 1)-th through the |T|-th character of T are the same digit.
+- Adding 1 to the digit of the 1st character of T gives the digit of the |T|-th character.
+
+For example, 1122, 01, and 444555 are 1122-strings, but 1222 and 90 are not 1122-strings.
+
+Find the number, modulo 998244353, of (not necessarily contiguous) subsequences of S that are 1122-strings.
+
+Two subsequences are counted separately if they are extracted from different positions, even if they are identical as strings.
+
+Constraints
+S is a string consisting of digits with length between 1 and 10^6, inclusive.
+
+Input
+The input is given from Standard Input in the following format:
+
+S
+
+Output
+Output the number, modulo 998244353, of subsequences of S that are 1122-strings.
+
+Sample Input 1
+1122
+
+Sample Output 1
+5
+
+The following five subsequences satisfy the condition.
+
+- 12 extracted from the 1st and 3rd characters of S
+- 12 extracted from the 1st and 4th characters of S
+- 12 extracted from the 2nd and 3rd characters of S
+- 12 extracted from the 2nd and 4th characters of S
+- 1122 extracted from the 1st through 4th characters of S
+
+Thus, output 5.
+
+Note that two subsequences are counted separately if they are extracted from different positions, even if they are identical as strings.
+
+Sample Input 2
+2025
+
+Sample Output 2
+0
+
+Sample Input 3
+0777468889971
+
+Sample Output 3
+30
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
