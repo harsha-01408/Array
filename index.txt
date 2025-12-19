@@ -2919,3 +2919,51 @@ Current cash is 12. To produce product 0, we need at least 6 (12 ≥ 6). After p
 Current cash is 8. To produce product 2, we need at least 8 (8 ≥ 8). After production, cash is 8 - 7 = 1.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Count Triplets with Bounded Difference
+
+Problem Description
+You are given an array of integers arr and a number d. Select a group of three elements where the difference between the largest and smallest values in the group is at most d.
+Return the total number of such groups, modulo (10^9 + 7).
+
+Examples
+
+Example 1
+Input: arr = [-3, -2, -1, 0], d = 2
+Output: 2
+Explanation:
+All Valid Triplets
+1) [-3, -2, -1]  max diff = (-1) - (-3) = 2
+2) [-2, -1, 0]   max diff = 0 - (-2) = 2
+
+Example 2
+Input: arr = [2, 1, 3, 4], d = 3
+Output: 4
+Explanation:
+All Valid Triplets
+1) [2, 1, 3]  max diff = 3 - 1 = 2
+2) [2, 1, 4]  max diff = 4 - 1 = 3
+3) [2, 3, 4]  max diff = 4 - 2 = 2
+4) [1, 3, 4]  max diff = 4 - 1 = 3
+
+Constraints
+3 ≤ size of arr ≤ 2 * 10^5
+1 ≤ d ≤ 10^9
+-10^9 ≤ arr[i] ≤ 10^9
+
+Function Signature (C++)
+/*
+ * Complete the 'countTripletsWithinDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY arr
+ *  2. INTEGER d
+ */
+int countTripletsWithinDifference(vector<int> arr, int d) {
+
+}
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
