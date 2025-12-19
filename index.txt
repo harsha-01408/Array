@@ -2846,3 +2846,76 @@ Sample Output 3
 30
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Plan Production
+Problem Description
+You must plan production for a company that manufactures multiple products. Each product has two associated costs:
+- A worst-case cost that must be available before production begins.
+- An expected cost that is actually spent during production.
+
+Determine the minimum amount of starting cash needed to manufacture all products. Products can be produced in any order, and after completing each product, the remaining cash can be used for subsequent products.
+
+Example
+Given:
+worstCase = [6, 5, 7]
+expected = [4, 2, 1]
+
+This can be represented as:
+Product   worstCase   expected
+0         6           4
+1         5           2
+2         7           1
+
+The optimal production order is 2, 1, 0:
+Start with 9 units of cash.
+Produce product 2: requires 7 units worst-case, spends 1 unit expected.
+Remaining cash: 9 - 1 = 8 units.
+Produce product 1: requires 5 units worst-case, spends 2 units expected.
+Remaining cash: 8 - 2 = 6 units.
+Produce product 0: requires 6 units worst-case, spends 4 units expected.
+Remaining cash: 6 - 4 = 2 units.
+Therefore, the minimum starting amount is 9 units of cash.
+
+Function Description
+Complete the function planProduction in the editor. It has the following parameter(s):
+int worstCase[n]: the minimum cash-on-hand to produce each product.
+int expected[n]: the expected cost to produce each product.
+
+Returns
+long: the minimum starting cash required.
+
+Constraints
+1 ≤ n ≤ 10^5
+1 ≤ worstCase[i] ≤ 10^5
+1 ≤ expected[i] ≤ 10^5
+It is guaranteed that expected[i] ≤ worstCase[i] for every i (0 ≤ i < n).
+
+Sample Cases
+
+Sample Case 0
+Input
+worstCase = [6, 5, 7, 8]
+expected = [4, 2, 1, 1]
+Output
+10
+Explanation
+The optimal order to produce all products is (3, 2, 1, 0). This requires minimum starting funds of 10.
+Start with 10. To produce product 3, we need at least 8 (10 ≥ 8). After production, cash is 10 - 1 = 9.
+Current cash is 9. To produce product 2, we need at least 7 (9 ≥ 7). After production, cash is 9 - 1 = 8.
+Current cash is 8. To produce product 1, we need at least 5 (8 ≥ 5). After production, cash is 8 - 2 = 6.
+Current cash is 6. To produce product 0, we need at least 6 (6 ≥ 6). After production, cash is 6 - 4 = 2.
+
+Sample Case 1
+Input
+worstCase = [6, 7, 8]
+expected = [4, 4, 7]
+Output
+16
+Explanation
+The optimal order to produce all products is (1, 0, 2). This requires minimum starting funds of 16.
+Start with 16. To produce product 1, we need at least 7 (16 ≥ 7).
+After production, cash is 16 - 4 = 12.
+Current cash is 12. To produce product 0, we need at least 6 (12 ≥ 6). After production, cash is 12 - 4 = 8.
+Current cash is 8. To produce product 2, we need at least 8 (8 ≥ 8). After production, cash is 8 - 7 = 1.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
