@@ -2967,3 +2967,42 @@ int countTripletsWithinDifference(vector<int> arr, int d) {
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Computer Store
+Description
+There are n computers lined up on shelves in the local computer store. The brands of computers may be different. The shop assistant thinks the likelihood of selling products increases when computers of the same brand are placed in adjacent positions. The shop assistant would like to make at most k swaps to maximize the number of computers of the same brand adjacent to each other. Help the shop assistant to do that.
+
+Input
+The first line of input contains an integer n.
+The second line of input contains an integer k.
+The third line contains a string s of length n containing uppercase Latin letters. Each brand is represented with a single Latin letter in the given string.
+
+Output
+Print the maximum length of the adjacent computers of the same brand after making at most k swaps.
+
+Constraints
+1 ≤ n ≤ 50
+1 ≤ k ≤ 2500
+
+Examples
+Example #1
+Input:
+4
+1
+ABCB
+Output:
+2
+Explanation:
+The shop assistant would like to make one swap, swapping the third and fourth computers. Therefore, we will obtain "ABBC", where the maximum length of adjacent same-brand computers will be 2.
+
+Example #2
+Input:
+9
+3
+ABBABBABBA
+Output:
+4
+Explanation:
+"ABBBAABA" can be constructed using three swaps.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
