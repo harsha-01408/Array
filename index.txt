@@ -3006,3 +3006,15 @@ Explanation:
 "ABBBAABA" can be constructed using three swaps.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer N and a multiset of 3·N integers, where each integer is either 1, 2, or 3.
+
+Your task is to determine whether it is possible to partition all 3·N numbers into exactly N groups (triplets) such that:
+- each group contains exactly 3 numbers, and
+- the sum of the three numbers in every group is the same.
+
+For each test case, output:
+- "Yes" if such a partition is possible,
+- otherwise output "No".
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
