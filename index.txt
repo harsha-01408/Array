@@ -3018,3 +3018,25 @@ For each test case, output:
 - otherwise output "No".
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You’re given an array P of size N which is a permutation of numbers 0 to N-1.
+
+For every block size x from 1 to N:
+
+1) If N is not divisible by x:
+   - You cannot split the array into equal-sized consecutive blocks of length x,
+   - so beauty(x) = 0.
+
+2) If N is divisible by x:
+   - Split P into exactly N/x consecutive blocks, each of length x.
+   - For each block, compute its MEX:
+       MEX = smallest non-negative integer (0,1,2,...) that is missing from that block.
+   - Add all those MEX values (one from each block).
+   - Multiply the sum by x → that is beauty(x).
+
+Finally, output the total:
+    beauty(1) + beauty(2) + ... + beauty(N)
+modulo 1,000,000,007.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
