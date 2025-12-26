@@ -3078,3 +3078,14 @@ Round 3: rods = 1, shortest = 1 -> discard 1 -> []
 Answer: [4, 2, 1]
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Given an array orders of n distinct integers (orders on n consecutive days),
+count the number of periods [i, j] with length at least 3 (1 <= i <= n-2, i+1 < j <= n)
+such that:
+
+min(orders[i], orders[j]) > max(orders[i+1], orders[i+2], ..., orders[j-1])
+
+Return the total number of such offer (promotional) periods.
+Assume 1-based indexing in the definition above.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
