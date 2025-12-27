@@ -3089,3 +3089,35 @@ Return the total number of such offer (promotional) periods.
 Assume 1-based indexing in the definition above.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Imagine you are given a number line represented by coordinates [0, length - 1].
+Initially, all coordinates are uncolored (implicitly 0). You are coloring the
+coordinates along the line.
+
+You are given a list of queries in the following format:
+  [coord, color] - Color the coordinate 'coord' with color 'color'.
+  All existing colors at that coordinate are overwritten.
+
+TASK:
+After processing each query, record the number of consecutive pairs of
+coordinates that currently have the same color on the number line.
+
+Note:
+- Pairs of uncolored coordinates (0s) do NOT count.
+- Only consecutive pairs of non-zero values count.
+
+Input:
+- integer length: the length of the number line [0, length - 1]
+  Constraints: 1 <= length <= 10^9
+- array queries: list of queries, each query = [coord, color]
+
+Output:
+- array of integers where the i-th value is the number of same-color
+  consecutive pairs after processing the i-th query.
+
+Example:
+length = 7
+queries = [[1,2],[0,2],[3,5],[3,2],[2,2],[6,1],[1,3]]
+output = [0,1,1,1,3,3,1]
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
