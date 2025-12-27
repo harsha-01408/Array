@@ -3149,3 +3149,39 @@ Input Format for Custom Testing:
 The only line contains the string logData.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Each lowercase English letter is mapped to a digit from 1 to 9 using the 3×3 grid shown below. Each digit corresponds to a group of letters
+(e.g., 1 → a, b; 2 → c, d, e; 3 → f, g, h; ...).
+
+Mapping:
+1 → a, b
+2 → c, d, e
+3 → f, g, h
+4 → i, j, k
+5 → l, m, n
+6 → o, p, q
+7 → r, s, t
+8 → u, v, w
+9 → x, y, z
+
+A substring is called extraordinary if:
+- Convert each of its characters to their mapped digit values,
+- Take the sum of those digit values,
+- And this sum is divisible by the length of the substring.
+
+Given a string inputStr, determine how many non-empty extraordinary substrings it contains.
+
+Function:
+int countSubstrings(string inputStr)
+
+Input:
+- inputStr: a string of lowercase English letters
+
+Output:
+- Return the number of non-empty substrings whose mapped-digit sum is divisible by the substring length.
+
+Constraints:
+- 1 <= n <= 2000
+- All characters of inputStr are lowercase English letters.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
