@@ -3181,3 +3181,19 @@ Constraints:
 - inputStr contains only lowercase English letters
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You’re given a string samples made of lowercase letters a–z and some ? characters.
+
+Each ? must be replaced by a lowercase letter.
+
+For any position i, its overhead is how many times the same letter has appeared earlier in the string.
+
+Example: in "hello", the second 'l' has overhead 1 because one 'l' appeared before it.
+
+Your goal:
+
+Replace all ? so the total overhead (sum over all positions) is as small as possible.
+
+If multiple replacements achieve the same minimum total overhead, choose the lexicographically smallest resulting string.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
