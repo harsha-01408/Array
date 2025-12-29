@@ -3197,3 +3197,28 @@ Replace all ? so the total overhead (sum over all positions) is as small as poss
 If multiple replacements achieve the same minimum total overhead, choose the lexicographically smallest resulting string.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+A — Array Balancing
+
+You are given two integer arrays a and b of the same even length n.
+It is guaranteed that 0 ≤ a[i] ≤ n and 0 ≤ b[i] ≤ n for all i.
+
+You are allowed to perform the following operation at most 2n times:
+
+- Choose a subset S of indices such that |S| = n/2.
+- For every index i:
+    if i is in S, then a[i] := a[i] + 1
+    otherwise, a[i] := a[i] - 1
+
+Your task is to determine whether it is possible to transform array a into array b
+using at most 2n operations.
+
+If it is impossible, print -1.
+Otherwise, print an integer k (0 ≤ k ≤ 2n) — the number of operations,
+followed by k lines.
+Each of the next k lines must contain exactly n/2 distinct indices describing the subset S
+used in that operation.
+
+Any valid answer is accepted.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
