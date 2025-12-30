@@ -3222,3 +3222,23 @@ used in that operation.
 Any valid answer is accepted.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a 3×3 numeric keypad whose digits (1–9) are arranged differently each day.
+The layout is provided as a string keypad of length 9, where each consecutive group of 3
+characters represents a row of the keypad from top to bottom.
+
+You are also given a string s consisting of digits to type.
+
+Typing rules:
+- It takes 0 seconds to press the first key.
+- Moving your finger from the current key to any adjacent key takes 1 second.
+  Adjacent includes horizontal, vertical, and diagonal neighbors.
+- Moving to a non-adjacent key takes multiple 1-second moves through adjacent keys
+  along a shortest path.
+- Pressing a key when your finger is already on it costs 0 seconds.
+
+Task:
+Compute and return the minimum total time (in seconds) required to type the entire string s
+on the keypad described by keypad.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
