@@ -3263,3 +3263,19 @@ Choose sticks (you don’t have to use all of them), possibly reduce some by 1, 
 Because the answer can be huge, print it modulo (1,000,000,007).
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You’re given a triangle on a 2D coordinate plane (its 3 corner points), and then N drone locations (points).
+
+Your job is to:
+
+Calculate the triangle’s area using the given coordinate formula and print only the integer part (drop decimals).
+
+For each drone point, determine whether it lies inside the triangle or exactly on any of its edges. Count how many do, and print that count.
+
+Output format:
+
+Line 1: integer part of triangle area
+
+Line 2: number of drones inside/on the triangle
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
