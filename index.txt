@@ -3279,3 +3279,35 @@ Line 1: integer part of triangle area
 Line 2: number of drones inside/on the triangle
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Find Shortest Substring
+Problem Description
+Determine the length of the shortest substring to delete from a string s of length n, so that the resulting string contains only distinct characters. A substring is a sequence of characters that appear consecutively within a string. If a substring is deleted, the remaining parts of the string are joined together. If no deletion is necessary, the answer should be 0.
+
+Complete the function findShortestSubstring in the editor with the following parameter:
+s: the string to analyze
+
+Returns:
+int: an integer representing the length of the shortest substring that should be deleted
+
+Examples
+Example 1:
+Input: s = "abcbkck"
+Output: 3
+Explanation: There are three optimal choices: remove a substring of length 3 so the remaining string becomes "abck" with all distinct characters.
+
+Example 2:
+Input: s = "xabbcacpqr"
+Output: 3
+Explanation: Given string s = "xabbcacpqr", remove "bca" to get "xabcpqr", which has all distinct characters.
+
+Example 3:
+Input: s = "abc"
+Output: 0
+Explanation: The string is already all distinct characters, so no deletion is needed.
+
+Constraints
+1 ≤ n ≤ 10^5
+s consists of lowercase English letters only.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
