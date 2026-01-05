@@ -3242,3 +3242,24 @@ Compute and return the minimum total time (in seconds) required to type the enti
 on the keypad described by keypad.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You have N sticks/segments, each with some length.
+
+You can use sticks to build rectangles.
+To make one rectangle, you need 4 sticks such that:
+
+two opposite sides are equal, and
+
+the other two opposite sides are equal
+(i.e., you need lengths like x, x, y, y).
+The area of that rectangle will be x × y.
+
+You are allowed a small adjustment:
+For any stick, you may reduce its length by 1, but each stick can be reduced at most once (or left as it is).
+
+Your task:
+Choose sticks (you don’t have to use all of them), possibly reduce some by 1, form any number of rectangles, and maximize the total sum of areas of all rectangles you can make.
+
+Because the answer can be huge, print it modulo (1,000,000,007).
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
