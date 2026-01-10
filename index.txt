@@ -3328,3 +3328,23 @@ Your task is to pick the best rotation so that this cost is as small as possible
 and output that minimum cost.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+A farmer uses pivot irrigation to water a circular field of crops. Due to varying
+conditions, the field does not produce consistently. The farmer wants to achieve
+maximum profit using limited resources for harvest.
+
+The field is segmented into a number of equal segments and a profit is calculated
+for each segment. This profit is the cost to harvest versus the sale price of the
+produce.
+
+The farmer will harvest a number of contiguous segments along with those opposite.
+Determine the maximum profit the farmer can achieve.
+
+For example, the field is divided into n segments. The farmer will select k
+contiguous sections and those opposite for harvest. The profit estimates of the
+segments are given.
+
+The task is to compute the maximum total profit possible by choosing k contiguous
+segments and their opposite segments in the circular field.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
