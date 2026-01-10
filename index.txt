@@ -3311,3 +3311,20 @@ Constraints
 s consists of lowercase English letters only.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You have an array A of length N.
+
+You’re allowed to rotate it left any number of times:
+each move takes the first element and puts it at the end.
+
+After choosing a rotation, look at the array’s MEX (the smallest
+non-negative integer that does not appear in the array).
+
+Now consider only prefixes of the array (A[0..0], A[0..1], ...).
+The “cost” of the rotated array is the length of the shortest prefix whose MEX
+is the same as the MEX of the whole array.
+
+Your task is to pick the best rotation so that this cost is as small as possible,
+and output that minimum cost.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
