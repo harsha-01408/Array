@@ -3410,3 +3410,24 @@ All substrings:
 Answer = 5
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given n cards.  
+Each card has two numbers written on it:
+- a front value A[i]
+- a back value B[i]
+
+All cards initially show their front values.
+
+You may flip at most m cards.  
+Flipping a card replaces its visible value A[i] with B[i].
+
+After performing up to m flips, look at the numbers currently visible
+on all cards. Define the range as the difference between the maximum
+and minimum visible numbers.
+
+Your task is to choose which cards (if any) to flip so that this range
+is as small as possible.
+
+Output the minimum achievable range.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
