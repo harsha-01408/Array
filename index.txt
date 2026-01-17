@@ -3431,3 +3431,26 @@ is as small as possible.
 Output the minimum achievable range.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Metro Land is a country located on a 2D plane. They are planning a summer
+festival for everyone in the country and would like to minimize the overall
+cost of travel for their citizens. Costs of travel are calculated as follows:
+
+• A city is located at coordinates (x, y).
+• The festival is located at coordinates (a, b).
+• Cost of travel from a city to the festival = |x − a| + |y − b| per person.
+
+The festival can be held at any integral location in Metro Land. Find the
+optimal location for the festival, defined as the location with the minimal
+total travel cost assuming all people attend. Return the total travel cost
+for all citizens to attend the festival.
+
+Example:
+numPeople = [1, 2]
+x = [1, 3]
+y = [1, 3]
+
+There is 1 person in City 0 located at (x[0], y[0]) = (1, 1) and there are
+2 people in City 1 at (x[1], y[1]) = (3, 3).
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
