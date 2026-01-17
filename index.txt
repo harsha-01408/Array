@@ -3476,3 +3476,14 @@ Output:
 - Print the minimum number of cars that must be added to achieve the goal.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+A company is configuring its data center with exactly N servers numbered from 1 to N. You are the system administrator responsible for activating a subset of these servers.
+
+For operational safety, each server has exactly one incompatible server. If two incompatible servers are active at the same time, the system becomes unstable and the configuration is invalid.
+
+Your task is to determine the number of valid ways to choose a non-empty set of servers to keep active such that no pair of incompatible servers are active together.
+
+Since the number of valid configurations can be large, return the result modulo 10^9+7.
+Two configurations are considered different if the sets of active servers differ.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
