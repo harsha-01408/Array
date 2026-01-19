@@ -3534,3 +3534,40 @@ Output:
 7
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem: Minimum Colors to Paint Boxes
+
+You are given N boxes arranged in a line. The i-th box has a value boxes[i].
+Initially, all boxes are uncolored. You must paint every box using some colors,
+while satisfying the following rules:
+
+1) Contiguous-use rule (no reusing a color in separated places):
+   If two boxes i and j (i < j) are painted with the same color, then every box
+   between them (i < k < j) must also be painted with that same color.
+   In other words, each color can appear only in one continuous segment.
+
+2) Value-range rule for each color:
+   For all boxes painted with the same color, let minVal be the minimum value
+   and maxVal be the maximum value among those boxes. You must have:
+       maxVal - minVal <= S
+
+Task:
+Find the minimum number of colors required to paint all N boxes while satisfying
+both rules.
+
+Equivalent interpretation:
+Split the array boxes[] into the minimum number of contiguous segments such that
+for every segment:
+    max(segment) - min(segment) <= S
+Each segment uses a different color.
+
+Input:
+- Integer N (number of boxes)
+- Integer S (maximum allowed range within one color)
+- Array boxes of length N
+
+Output:
+- Minimum number of colors needed
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
