@@ -3571,3 +3571,31 @@ Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem: Remove the Largest Subarray While Keeping a Permutation
+
+You are given a permutation P of size N (i.e., P contains each integer from 1 to N exactly once).
+
+You must remove exactly one contiguous subarray P[L..R] (possibly empty only if allowed by the platform; otherwise L <= R).
+
+After removing this subarray, the remaining elements keep their original order and form a new array Q.
+
+Condition:
+Q must also be a permutation of {1, 2, ..., |Q|}.
+In other words, if the remaining length is M = N - (R - L + 1), then the set of values in Q must be exactly:
+{1, 2, ..., M} (each appearing once).
+
+Task:
+Find the maximum possible length of a subarray that can be removed while satisfying the above condition.
+Optionally, also output one such subarray [L, R] that achieves this maximum.
+
+Input:
+- Integer N
+- Permutation P of length N
+
+Output:
+- The maximum removable subarray length
+- (Optional) Indices L and R of one valid subarray to remove
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
