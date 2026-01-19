@@ -3487,3 +3487,50 @@ Since the number of valid configurations can be large, return the result modulo 
 Two configurations are considered different if the sets of active servers differ.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Inventory Conversion Cost Minimization
+
+An Amazon fulfillment center manages an inventory of products available in two variants:
+Variant A is represented by 0, and Variant B is represented by 1.
+
+The inventory contains n products, stored in an array product of length n, where product[i]
+denotes the variant of the i-th product.
+
+Variant B is no longer required, and all products must be converted to Variant A at the
+minimum possible total cost.
+
+You are also given a positive integer k, which represents the fixed length of a subarray
+that can be selected for a bulk operation.
+
+You may perform the following operations any number of times:
+
+1. Subarray Operation:
+   - Choose indices l and r such that 1 ≤ l ≤ r ≤ n and r − l + 1 = k.
+   - Choose exactly one index within this subarray and convert the product at that index
+     to Variant A.
+   - The cost of this operation is the sum of all values in product[l] through product[r].
+
+2. Single Index Operation:
+   - Choose any index i such that 1 ≤ i ≤ n.
+   - Convert product[i] to Variant A.
+   - The cost of this operation is product[i].
+
+Your task is to determine the minimum total cost required to convert all products in the
+array to Variant A.
+
+Input:
+- An integer array product of length n, where each element is either 0 or 1
+- An integer k representing the subarray length
+
+Output:
+- Return an integer representing the minimum conversion cost
+
+Example:
+Input:
+product = [1, 1, 1, 0, 1]
+k = 4
+
+Output:
+7
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
