@@ -3650,3 +3650,30 @@ Valid non-empty = 6 → {[1],[2],[3],[4],[2,3],[3,4]}
 If empty () counted: answer = 7, otherwise answer = 6.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+There are n servers in a network, arranged in increasing order of their capacities.
+The capacity of the i-th server is capacity[i], where 0 ≤ i < n.
+All values in the capacity array are distinct.
+
+The distance between two servers i and j is defined as:
+|capacity[i] − capacity[j]|
+
+For each server i, the closest server is the server j (j ≠ i) with the minimum
+distance to i. It is guaranteed that this closest server is unique.
+
+To manage the network, the following operations can be performed from any server x:
+
+1. Connect to any server y at a cost of |capacity[x] − capacity[y]| units.
+2. Connect to the closest server of x at a fixed cost of 1 unit.
+
+You are given m queries. Each query is defined by two integers:
+fromServer[i] and toServer[i].
+
+For each query, determine the minimum cost required to connect from
+fromServer[i] to toServer[i]. The connection may be direct or routed through
+one or more intermediate servers.
+
+Note:
+- All values in the capacity array are distinct.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
