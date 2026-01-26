@@ -3677,3 +3677,31 @@ Note:
 - All values in the capacity array are distinct.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Server Management
+
+You are given n servers. For each server i:
+- serverCapacity[i] is the maximum number of requests it can handle normally.
+- incomingRequests[i] is the number of requests arriving at it.
+
+A server can handle at most its capacity, so server i will actually handle:
+min(incomingRequests[i], serverCapacity[i]) requests.
+
+You are allowed to choose exactly k servers and double their capacities.
+If server i is chosen, its capacity becomes 2 * serverCapacity[i], and it can then handle:
+min(incomingRequests[i], 2 * serverCapacity[i]) requests.
+
+Task:
+Return the maximum possible total number of handled requests across all servers after doubling
+the capacity of exactly k servers.
+
+Input:
+- n (number of servers)
+- serverCapacity (array of length n)
+- incomingRequests (array of length n)
+- k (number of servers to upgrade)
+
+Output:
+- maximum total handled requests after the upgrades
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
