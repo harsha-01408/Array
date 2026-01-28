@@ -3716,3 +3716,51 @@ level[y] > level[w]
 Return the total number of such quadruples.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem
+
+You are given:
+- An array A of length N (1-indexed), containing integers representing gift categories or similar values.
+- An array B of length M, where each B[i] indicates a "wall" placed after position B[i] in array A.
+
+The walls divide array A into several contiguous segments (blocks).
+- Segments are non-empty and cover the entire array from 1 to N.
+- If no walls, there is only 1 segment: the whole array.
+
+The cost of the current division is defined as:
+Cost = sum over all segments of (number of distinct values in that segment)
+
+You are allowed to perform the following operation at most once:
+- Choose one wall and remove it. This merges the two adjacent segments separated by that wall into one single segment.
+
+After removing at most one wall (you can also choose to remove none), compute the minimum possible cost you can achieve.
+
+In other words:
+Find the minimum value of:
+  sum of distinct counts over all final segments
+
+by either:
+- keeping the current walls (no removal), or
+- removing exactly one wall (merging exactly two adjacent segments)
+
+Output this minimum cost for each test case.
+
+Constraints (typical, based on similar problems):
+- 1 ≤ T ≤ 100          (number of test cases)
+- 1 ≤ N ≤ 10^5
+- 0 ≤ M ≤ N-1
+- 1 ≤ A[i] ≤ 10^9
+- 1 ≤ B[i] < N          (walls after positions 1 to N-1)
+- B contains distinct values (no duplicate walls)
+
+Input format (assumed standard):
+First line: T
+For each test case:
+  First line: N M
+  Second line: N integers A[1..N]
+  Third line: M integers B[1..M]
+
+Output:
+For each test case, one integer: the minimum achievable cost.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
