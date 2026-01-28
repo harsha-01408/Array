@@ -3705,3 +3705,14 @@ Output:
 - maximum total handled requests after the upgrades
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given n and an array level[1..n], which is a permutation of 1..n.
+
+Count the number of index quadruples (x, y, z, w) such that:
+1 ≤ x < y < z < w ≤ n  
+level[x] < level[z]  
+level[y] > level[w]
+
+Return the total number of such quadruples.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
