@@ -3764,3 +3764,45 @@ Output:
 For each test case, one integer: the minimum achievable cost.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Smash the Bricks
+
+You are given n bricks arranged in order from 1 to n.
+
+Brick i requires newtons[i] units of force to break.
+
+You can use two types of hammers:
+
+Big hammer
+
+Breaks any brick in exactly 1 blow
+
+Can be used at most maxBig times
+
+Small hammer
+
+Each blow reduces a brick’s remaining strength by 1
+
+Brick i requires newtons[i] blows if smashed using only the small hammer
+
+Your task is to decide which bricks to smash with the big hammer (up to maxBig) and which to smash with the small hammer so that the total number of blows is minimized.
+
+Output
+
+Return a 2D integer array with:
+
+Row 1: [minimum_total_blows]
+
+Row 2: Sorted list of 1-based indices of bricks smashed with the big hammer
+
+Row 3: Sorted list of 1-based indices of bricks smashed with the small hammer
+
+Constraints & Notes
+
+You may use the big hammer fewer than maxBig times.
+
+All bricks must be smashed.
+
+Indices must be 1-based and sorted in ascending order.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
