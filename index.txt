@@ -3840,3 +3840,34 @@ Your goal is to transform the string into another string of the same length such
 Determine the minimum number of character changes needed to make the string satisfy both conditions.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Developer–Tester Team Formation
+
+A software company is forming teams using two types of employees:
+developers (D) and testers (T). Each team is arranged in a single row
+and must contain exactly n employees.
+
+To ensure proper integration, the company enforces the following rules:
+- No more than (d − 1) developers can be seated consecutively.
+- No more than (t − 1) testers can be seated consecutively.
+
+You are given integers d and t, along with multiple queries.
+Each query provides a team size n, while d and t remain fixed.
+
+For each query, determine the number of distinct valid seating
+arrangements of developers and testers that satisfy the constraints.
+
+Because the number of possible arrangements can be very large,
+return each result modulo (10^9 + 7).
+
+Input:
+- Integer d: exclusive upper bound on consecutive developers
+- Integer t: exclusive upper bound on consecutive testers
+- Integer q: number of queries
+- q lines follow, each containing an integer n
+
+Output:
+- q integers, where each value is the number of valid teams of size n
+  modulo (10^9 + 7)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
