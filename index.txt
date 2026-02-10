@@ -3871,3 +3871,38 @@ Output:
   modulo (10^9 + 7)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer n, and it is guaranteed that n is divisible by 4.
+
+Your task is to choose an integer x such that:
+
+• x is greater than or equal to n  
+• x has the same binary length (number of bits) as n  
+• The value
+
+      v = n ^ (n+1) ^ (n+2) ^ ... ^ x
+
+  is as large as possible
+
+(^ represents the bitwise XOR operation.)
+
+If multiple values of x produce the same maximum v, return the smallest such x.
+
+Example:
+Input:
+n = 4
+
+Possible x values (same bit-length as 4): 4, 5, 6, 7
+
+Compute v:
+x = 4 → v = 4  
+x = 5 → v = 4 ^ 5 = 1  
+x = 6 → v = 4 ^ 5 ^ 6 = 7  
+x = 7 → v = 4 ^ 5 ^ 6 ^ 7 = 0  
+
+The maximum value of v occurs at x = 6.
+
+Output:
+6
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
