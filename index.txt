@@ -3906,3 +3906,38 @@ Output:
 6
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Cities lie on all integer coordinate points (x, y) in a 2D plane.
+There are n Amazon retailers. The i-th retailer is at (xi, yi).
+
+Retailer i can deliver to every city inside (or on the boundary of) the rectangle
+with corners (0,0), (xi,0), (xi,yi), (0,yi).
+Equivalently, it covers all points (a, b) such that:
+0 <= a <= xi  and  0 <= b <= yi.
+
+You are given q requests, each a point (a, b).
+For each request, output how many retailers can deliver to (a, b),
+i.e., how many retailers satisfy:
+a <= xi  and  b <= yi.
+
+Input:
+- retailers[n][2]
+- requests[q][2]
+
+Output:
+- ans[q]
+
+Constraints:
+1 <= n, q <= 75 * 10^4
+1 <= xi <= 10^9
+1 <= yi <= 100
+0 <= a <= 10^9
+0 <= b <= 100
+No two retailers share the same coordinates.
+
+Example:
+retailers = [(1,4), (2,3), (1,5)]
+requests  = [(1,1), (1,4)]
+output    = [3, 2]
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
