@@ -3941,3 +3941,15 @@ requests  = [(1,1), (1,4)]
 output    = [3, 2]
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You’re given each employee’s work shift as a time interval [startTime[i], endTime[i]].
+
+Two employees can interact if their shifts overlap at all.
+
+Find the largest group of employees you can choose such that there exists at least
+one “hub” employee in the group whose shift overlaps with every other employee in
+that same group.
+
+Return the maximum possible group size.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
