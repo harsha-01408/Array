@@ -3993,3 +3993,14 @@ int[] calculateMinimumReliability(int k, int m, int[] reliability) {
 
 
 /////////////////////////========/////////////////=//=========/////////////////////
+
+You are given an integer n and a list of allowed digits allowed_digits.
+
+Find the smallest positive integer (return it as a string) such that:
+1) It is divisible by n.
+2) Every digit in the number belongs to allowed_digits.
+3) No two consecutive digits in the number are the same.
+
+If no such number can be formed, return "-1".
+
+/////////////////////////========/////////////////=//=========/////////////////////
