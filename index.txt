@@ -4004,3 +4004,39 @@ Find the smallest positive integer (return it as a string) such that:
 If no such number can be formed, return "-1".
 
 /////////////////////////========/////////////////=//=========/////////////////////
+
+
+Maximize Tree Node Sum After Paired XOR Operations
+
+You are given a tree with n nodes labeled 0..n-1 (connected, no cycles).
+Each node i has an integer value values[i]. You are also given an integer k.
+
+Operation (can be performed any number of times, including 0):
+- Choose an edge (u, v) from edges
+- Update both endpoints:
+    values[u] = values[u] XOR k
+    values[v] = values[v] XOR k
+
+Your task is to return the maximum possible value of:
+    sum(values[i]) for i = 0..n-1
+after performing the operation any number of times.
+
+Input:
+- int n
+- int[][] edges   // edges.length = n - 1, each edges[j] = [u, v]
+- int[] values    // length n
+- int k
+
+Output:
+- long long       // maximum achievable sum
+
+Notes:
+- XOR is bitwise XOR.
+- Applying the operation twice on the same edge cancels its effect.
+
+Constraints (typical):
+- 1 <= n <= 2e5
+- edges describe a valid tree
+- 0 <= values[i], k <= 1e9
+
+/////////////////////////========/////////////////=//=========//////////////////////////////////////////////========/////////////////=//=========/////////////////////
