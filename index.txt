@@ -4040,3 +4040,30 @@ Constraints (typical):
 - 0 <= values[i], k <= 1e9
 
 /////////////////////////========/////////////////=//=========//////////////////////////////////////////////========/////////////////=//=========/////////////////////
+
+You are given a circular binary array nums and an integer k.
+
+You may change at most k elements with value 0 into 1.
+
+Return the maximum number of consecutive 1s that can be obtained after performing at most k such changes.
+
+Since the array is circular, the element after nums[n - 1] is nums[0]. Therefore, a consecutive segment of 1s may wrap from the end of the array back to the beginning.
+
+Example 1:
+Input: nums = [1, 0, 1, 1], k = 1
+Output: 4
+Explanation:
+Flip the 0 to 1. The array becomes [1, 1, 1, 1], so the longest consecutive block of 1s has length 4.
+
+Example 2:
+Input: nums = [1, 0, 0, 1, 1], k = 1
+Output: 3
+Explanation:
+Because the array is circular, one optimal choice gives a longest circular block of 3 consecutive 1s.
+
+Constraints:
+- 1 <= nums.length <= 2 * 10^5
+- nums[i] is either 0 or 1
+- 0 <= k <= nums.length
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
