@@ -4139,3 +4139,33 @@ Constraints:
 - 1 <= y <= 10^9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Visible Towers
+
+You are given an array height of size n, where height[i] represents the height of the i-th tower.
+
+For each tower i, find how many other towers are visible from it.
+
+A tower i can see another tower j (i != j) if every tower between i and j has height strictly smaller than height[j].
+
+Return an array answer of size n where answer[i] is the number of towers visible from tower i.
+
+Example 1:
+Input: height = [5, 2, 10, 1]
+Output: [2, 2, 3, 1]
+
+Explanation:
+- Tower 0 (height 5) can see towers 1 and 2.
+- Tower 1 (height 2) can see towers 0 and 2.
+- Tower 2 (height 10) can see towers 0, 1, and 3.
+- Tower 3 (height 1) can see tower 2.
+
+Example 2:
+Input: height = [3, 1, 4]
+Output: [2, 2, 2]
+
+Constraints:
+- 1 <= n <= 10^5
+- 1 <= height[i] <= 10^9
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
