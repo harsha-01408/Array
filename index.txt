@@ -4230,3 +4230,28 @@ Function Signature:
 vector<int> hardQueries(int n, vector<int>& val, vector<vector<int>>& queries);
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer array engagementScores, where engagementScores[i] represents the engagement score of the i-th user, and an integer minWatchPartyScore.
+
+A watch party is valid if:
+- it contains k users,
+- the minimum engagement score among those users is m,
+- and k * m >= minWatchPartyScore.
+
+Each user can belong to at most one watch party, and some users may remain unused.
+
+Return the maximum number of valid watch parties that can be formed.
+
+Function Signature:
+int findMaxWatchParties(vector<int>& engagementScores, int minWatchPartyScore);
+
+Example:
+Input: engagementScores = [1, 3, 3, 2, 2], minWatchPartyScore = 6
+Output: 2
+
+Constraints:
+1 <= engagementScores.length <= 1e5
+1 <= engagementScores[i] <= 1e9
+1 <= minWatchPartyScore <= 1e9
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
