@@ -4255,3 +4255,50 @@ Constraints:
 1 <= minWatchPartyScore <= 1e9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a 2 x n grid represented by a string array domino of size 2, where domino[0] is the top row and domino[1] is the bottom row.
+
+The grid is fully covered by dominoes. Each domino occupies exactly two adjacent cells, either:
+
+1. Vertically: one cell in the top row and one cell in the bottom row of the same column, or
+2. Horizontally: two adjacent cells in the same row.
+
+Cells belonging to the same domino contain the same character. Different dominoes may have different characters.
+
+Your task is to color each domino using one of three colors: Red, Green, or Blue.
+
+Two dominoes are considered adjacent if they share a side. Adjacent dominoes must have different colors.
+
+Return the number of valid ways to color all dominoes. Since the answer may be very large, return it modulo 1e9 + 7.
+
+Example 1:
+Input: domino = ["ab", "ab"]
+Output: 6
+Explanation:
+There are 2 vertical dominoes.
+The first domino can be colored in 3 ways.
+The second domino must use a different color, so it can be colored in 2 ways.
+Total = 3 * 2 = 6.
+
+Example 2:
+Input: domino = ["abb", "acc"]
+Output: 6
+Explanation:
+The dominoes are:
+- 'a' as a vertical domino in column 0
+- 'b' as a horizontal domino covering the top row at columns 1 and 2
+- 'c' as a horizontal domino covering the bottom row at columns 1 and 2
+
+All three dominoes are pairwise adjacent, so they must all have different colors.
+Number of valid colorings = 3 * 2 * 1 = 6.
+
+Constraints:
+- domino.length == 2
+- 1 <= domino[0].length == domino[1].length <= 10^5
+- domino[0][i] and domino[1][i] are lowercase English letters
+- The input always represents a valid tiling of the 2 x n grid using dominoes
+
+Function signature:
+int countColorings(vector<string>& domino)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
