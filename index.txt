@@ -4332,3 +4332,48 @@ Example of one move:
 In this example, only one kid moved, so this photo is valid.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer array memory of size n.
+
+There are n servers arranged in a circle, and initially every server has memory value 0.
+
+In one operation, you may choose any circular contiguous segment of servers and increase the memory of every server in that segment by 1.
+
+A circular contiguous segment means:
+- you can choose a normal subarray [l...r], or
+- a segment that wraps around the end of the array back to the beginning.
+
+Your task is to make the final memory of each server exactly equal to memory[i].
+
+Return the minimum number of operations required.
+
+Example 1:
+Input: memory = [1,2,1,2]
+Output: 2
+
+Explanation:
+Initially: [0,0,0,0]
+
+Operation 1:
+Choose servers [1,2,3]
+Array becomes [0,1,1,1]
+
+Operation 2:
+Choose servers [3,0,1]
+Array becomes [1,2,1,2]
+
+So the minimum number of operations is 2.
+
+Example 2:
+Input: memory = [2,2,2]
+Output: 2
+
+Explanation:
+Choose all servers in both operations.
+After 2 operations, the array becomes [2,2,2].
+
+Constraints:
+1 <= n <= 2 * 10^5
+1 <= memory[i] <= 10^9
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
