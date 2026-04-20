@@ -4377,3 +4377,46 @@ Constraints:
 1 <= memory[i] <= 10^9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer k and an array locks of length n.
+
+Each lock has a value from 1 to k, arranged in a circular manner:
+
+1 is adjacent to 2 and k
+2 is adjacent to 1 and 3
+3 is adjacent to 2 and 4
+...
+k is adjacent to k - 1 and 1
+
+In one operation, you may choose any one lock and change its value to one of its two adjacent values on this circle.
+
+Your goal is to make all lock values equal using the minimum total number of operations.
+
+Return the minimum number of operations required.
+
+Example 1:
+Input: k = 100, locks = [1,2,99]
+Output: 3
+Explanation:
+One optimal way is to make all locks equal to 1:
+- 1 -> 1 needs 0 operations
+- 2 -> 1 needs 1 operation
+- 99 -> 100 -> 1 needs 2 operations
+Total = 3
+
+Example 2:
+Input: k = 10, locks = [2,5,9]
+Output: 6
+Explanation:
+If we make all locks equal to 2:
+- 2 -> 2 needs 0
+- 5 -> 2 needs 3
+- 9 -> 10 -> 1 -> 2 needs 3
+Total = 6
+
+Constraints:
+- 2 <= k <= 10^9
+- 1 <= locks.length <= 10^5
+- 1 <= locks[i] <= k
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
