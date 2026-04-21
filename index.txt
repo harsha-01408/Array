@@ -4460,3 +4460,43 @@ Constraints:
 - 1 <= arrivalTime[i] <= 10^9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given an integer array arr of length N and an integer K.
+
+A subarray is called dominant if there exists at least one value in that subarray whose frequency is at least K.
+
+Your task is to count how many subarrays of arr are dominant.
+
+A subarray is a contiguous non-empty part of the array.
+
+Return the total number of dominant subarrays.
+
+Example 1:
+Input: arr = [1, 2, 1, 2, 1], K = 2
+Output: 6
+
+Explanation:
+The dominant subarrays are:
+[1,2,1]
+[2,1,2]
+[1,2,1]
+[1,2,1,2]
+[2,1,2,1]
+[1,2,1,2,1]
+
+Example 2:
+Input: arr = [1, 1, 1], K = 2
+Output: 3
+
+Explanation:
+The dominant subarrays are:
+[1,1] at indices [0..1]
+[1,1] at indices [1..2]
+[1,1,1]
+
+Constraints:
+1 <= N <= 2 * 10^5
+1 <= arr[i] <= 10^9
+1 <= K <= N
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
